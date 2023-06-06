@@ -51,5 +51,20 @@
         android:id="@+id/detailedVacancyFragment"
         android:name="com.example.jobseeker.fragments.DetailedVacancyFragment"
         android:label="Vacancy"
-        tools:layout="@layout/fragment_detailed_vacancy" />
+        tools:layout="@layout/fragment_detailed_vacancy" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="salary"
+            app:argType="string" />
+        <argument
+            android:name="company"
+            app:argType="string" />
+        <argument android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="descriprion"
+            app:argType="string" />
+    </fragment>
 </navigation>
