@@ -6,12 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.jobseeker.adapter.VacancyItemAdapter
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.jobseeker.JobSeekerApplication
+import com.example.jobseeker.adapter.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentVacanciesListBinding
-import com.example.jobseeker.model.SearchParametersViewModel
+import com.example.jobseeker.model.*
 
 class VacanciesListFragment : Fragment() {
-    private val searchViewModel: SearchParametersViewModel by activityViewModels()
+    private val vacancyViewModel: VacancyViewModel by activityViewModels {
+        VacancyViewModelFactory()
+    }
+    private val savedVacanciesViewModel: SavedVacanciesViewModel by activityViewModels {
+        SavedVacanciesViewModelFactory(
+            (activity?.application as JobSeekerApplication).database.vacancyDao()
+        )
+    }
 
     private var _binding: FragmentVacanciesListBinding? = null
     private val binding get() = _binding!!
@@ -27,20 +37,39 @@ class VacanciesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        searchViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
-            val vacanciesRecyclerView = binding.vacancyList
-            vacanciesRecyclerView.adapter = VacancyItemAdapter(requireContext(), vacancies)
-            vacanciesRecyclerView.setHasFixedSize(true)
+        val adapter = VacancyListAdapter(
+            {
+                val action =
+                    VacanciesListFragmentDirections
+                        .actionVacanciesListFragmentToDetailedVacancyFragment(
+                            it.title,
+                            it.salary,
+                            it.company,
+                            it.location,
+                            it.description
+                        )
+                findNavController().navigate(action)
+            },
+            {
+                savedVacanciesViewModel.addVacancy(it)
+            }
+        )
+        binding.vacancyList.adapter = adapter
+        vacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
+            vacancies.let {
+                adapter.submitList(it)
+            }
         }
+        binding.vacancyList.layoutManager = LinearLayoutManager(context)
         setupTextViews()
     }
 
     private fun setupTextViews() {
         with(binding) {
-            keyWordsTextView.text = searchViewModel.keyWords
-            categoryTextView.text = searchViewModel.category
-            experienceTextView.text = searchViewModel.experience
-            locationTextView.text = searchViewModel.location
+            keyWordsTextView.text = vacancyViewModel.keyWords
+            categoryTextView.text = vacancyViewModel.category
+            experienceTextView.text = vacancyViewModel.experience
+            locationTextView.text = vacancyViewModel.location
         }
     }
 

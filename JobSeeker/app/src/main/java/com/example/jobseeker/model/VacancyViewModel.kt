@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.network.VacanciesApi
 import kotlinx.coroutines.launch
 
-class SearchParametersViewModel : ViewModel() {
+class VacancyViewModel : ViewModel() {
     private var _keyWords: String = ""
     val keyWords: String get() = _keyWords
     private var _category: String = ""

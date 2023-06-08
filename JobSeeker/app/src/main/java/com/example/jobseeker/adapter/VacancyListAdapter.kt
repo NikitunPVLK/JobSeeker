@@ -1,0 +1,62 @@
+package com.example.jobseeker.adapter
+
+import android.text.Html
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.jobseeker.databinding.VacancyListItemBinding
+import com.example.jobseeker.model.Vacancy
+
+class VacancyListAdapter(
+    private val onItemClicked: (Vacancy) -> Unit, private val onSaveButtonClicked: (Vacancy) -> Unit
+) : ListAdapter<Vacancy, VacancyListAdapter.VacancyViewHolder>(DiffCallBack) {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VacancyViewHolder {
+        return VacancyViewHolder(
+            VacancyListItemBinding.inflate(
+                LayoutInflater.from(parent.context)
+            ), onSaveButtonClicked
+        )
+    }
+
+    override fun onBindViewHolder(holder: VacancyViewHolder, position: Int) {
+        val current = getItem(position)
+        holder.itemView.setOnClickListener {
+            onItemClicked(current)
+        }
+        holder.bind(current)
+    }
+
+    class VacancyViewHolder(
+        private var binding: VacancyListItemBinding,
+        private val onSaveButtonClicked: (Vacancy) -> Unit
+    ) : ViewHolder(binding.root) {
+        fun bind(vacancy: Vacancy) {
+            binding.apply {
+                vacancyTitle.text = vacancy.title
+                vacancySalary.text = vacancy.salary
+                vacancyCompany.text = vacancy.company
+                vacancyLocation.text = vacancy.location
+                vacancyShortDescription.text = Html.fromHtml(vacancy.description)
+                vacancySaveButton.setOnClickListener {
+                    onSaveButtonClicked(vacancy)
+                }
+            }
+        }
+    }
+
+    companion object {
+        private val DiffCallBack = object : DiffUtil.ItemCallback<Vacancy>() {
+            override fun areItemsTheSame(oldItem: Vacancy, newItem: Vacancy): Boolean {
+                return oldItem === newItem
+            }
+
+            override fun areContentsTheSame(oldItem: Vacancy, newItem: Vacancy): Boolean {
+                return oldItem.url == newItem.url
+            }
+        }
+    }
+
+}

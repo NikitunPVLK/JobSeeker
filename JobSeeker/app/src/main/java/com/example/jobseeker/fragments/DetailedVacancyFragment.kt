@@ -6,12 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.navArgs
 import com.example.jobseeker.databinding.FragmentDetailedVacancyBinding
+import com.example.jobseeker.model.Vacancy
+import com.example.jobseeker.model.VacancyViewModel
+import com.example.jobseeker.model.VacancyViewModelFactory
 
 class DetailedVacancyFragment : Fragment() {
+    private val navigationArgs: DetailedVacancyFragmentArgs by navArgs()
 
     private var _binding: FragmentDetailedVacancyBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,12 +30,15 @@ class DetailedVacancyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.let {
-            binding.vacancyTitle.text = it.getString("title")
-            binding.vacancySalary.text = it.getString("salary")
-            binding.vacancyCompany.text = it.getString("company")
-            binding.vacancyLocation.text = it.getString("location")
-            binding.vacancyDescription.text = Html.fromHtml(it.getString("description"))
+        binding.apply {
+            with(navigationArgs) {
+                vacancyTitle.text = title
+                vacancySalary.text = salary
+                vacancyCompany.text = company
+                vacancyLocation.text = location
+                vacancyDescription.text = Html.fromHtml(description)
+            }
+
         }
     }
 

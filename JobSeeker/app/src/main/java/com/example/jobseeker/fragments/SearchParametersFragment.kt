@@ -10,11 +10,14 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchParametersBinding
-import com.example.jobseeker.model.SearchParametersViewModel
+import com.example.jobseeker.model.VacancyViewModel
+import com.example.jobseeker.model.VacancyViewModelFactory
 
 class SearchParametersFragment : Fragment() {
 
-    private val viewModel: SearchParametersViewModel by activityViewModels()
+    private val viewModel: VacancyViewModel by activityViewModels {
+        VacancyViewModelFactory()
+    }
 
     private var _binding: FragmentSearchParametersBinding? = null
     private val binding get() = _binding!!
@@ -28,6 +31,12 @@ class SearchParametersFragment : Fragment() {
         setupCategoryAutoComplete()
         setupExperienceSpinner()
         setupLocationAutoComplete()
+        binding.floatingActionButton.setOnClickListener {
+            val action =
+                SearchParametersFragmentDirections
+                    .actionSearchParametersFragmentToSavedVacanciesFragment()
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 
