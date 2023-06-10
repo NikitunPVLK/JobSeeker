@@ -21,7 +21,6 @@ public class DouScraper extends AbstractScraper {
         addCategoryToUrl();
         addSearchToUrl();
         addExperienceToUrl();
-        urlWithCriteria = "https://jobs.dou.ua/vacancies/?search=asdasdasdasdasd";
     }
 
     private void addLocationToUrl() {

@@ -19,5 +19,7 @@ data class Vacancy(
     @ColumnInfo(name = "location")
     val location: String,
     @ColumnInfo(name = "description")
-    val description: String
+    val description: String,
+    @ColumnInfo(name = "is_saved")
+    var isSaved: Boolean = false
 )

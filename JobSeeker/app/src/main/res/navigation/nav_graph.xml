@@ -66,5 +66,9 @@
         <argument
             android:name="description"
             app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
 </navigation>

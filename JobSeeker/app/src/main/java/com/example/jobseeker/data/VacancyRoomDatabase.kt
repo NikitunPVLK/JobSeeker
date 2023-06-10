@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.jobseeker.model.Vacancy
 
-@Database(entities = [Vacancy::class], version = 1, exportSchema = false)
+@Database(entities = [Vacancy::class], version = 2, exportSchema = false)
 abstract class VacancyRoomDatabase : RoomDatabase() {
 
     abstract fun vacancyDao(): VacancyDao

@@ -7,6 +7,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WorkUaScraper extends AbstractScraper {
     private Element companyAndLocationBlock;
@@ -66,7 +68,18 @@ public class WorkUaScraper extends AbstractScraper {
 
     @Override
     protected Elements getVacancyElements(Document document) {
-        return document.getElementsByClass("card card-hover card-visited wordwrap job-link");
+        Element vacancyHolder = document.getElementById("pjax-job-list");
+        Elements vacancyElements = new Elements();
+        if (vacancyHolder != null) {
+            for (Element element : vacancyHolder.children()) {
+                if (element.className().equals("text-muted add-bottom")) {
+                    break;
+                } else if (element.className().equals("card card-hover card-visited wordwrap job-link")) {
+                    vacancyElements.add(element);
+                }
+            }
+        }
+        return vacancyElements;
     }
 
     @Override
@@ -88,7 +101,14 @@ public class WorkUaScraper extends AbstractScraper {
     @Override
     protected String getSalary() {
         if (!currentVacancy.getElementsByTag("div").get(1).hasClass("add-top-xs")) {
-            return currentVacancy.getElementsByTag("div").get(1).text();
+            Element salaryElement = currentVacancy.getElementsByTag("div").get(1);
+            List<String> textElements = new ArrayList<>();
+            for (Element element : salaryElement.children()) {
+                if (!element.hasClass("middot")) {
+                    textElements.add(element.text());
+                }
+            }
+            return String.join(", ", textElements);
         }
         return "";
     }

@@ -2,6 +2,7 @@ package com.example.jobseeker.fragments
 
 import android.os.Bundle
 import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,13 +34,22 @@ class DetailedVacancyFragment : Fragment() {
         binding.apply {
             with(navigationArgs) {
                 vacancyTitle.text = title
-                vacancySalary.text = salary
+                if (salary.isNotEmpty()) {
+                    vacancySalary.text = salary
+                }
+                else {
+                    vacancySalary.visibility = View.GONE
+                }
                 vacancyCompany.text = company
                 vacancyLocation.text = location
                 vacancyDescription.text = Html.fromHtml(description)
+                vacancyUrl.text = buildUrlText(url)
             }
-
         }
+    }
+
+    private fun buildUrlText(url: String): String {
+        return "Source: $url"
     }
 
     override fun onDestroyView() {

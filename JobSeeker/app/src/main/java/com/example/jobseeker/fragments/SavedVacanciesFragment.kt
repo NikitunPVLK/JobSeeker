@@ -10,17 +10,16 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jobseeker.JobSeekerApplication
 import com.example.jobseeker.adapter.VacancyListAdapter
-import com.example.jobseeker.databinding.FragmentDetailedVacancyBinding
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.model.SavedVacanciesViewModel
-import com.example.jobseeker.model.SavedVacanciesViewModelFactory
+import com.example.jobseeker.model.SavedVacancyViewModel
+import com.example.jobseeker.model.VacancyViewModelFactory
 
 class SavedVacanciesFragment : Fragment() {
     private var _binding: FragmentSavedVacanciesBinding? = null
     private val binding get() = _binding!!
 
-    private val savedVacanciesViewModel: SavedVacanciesViewModel by activityViewModels {
-        SavedVacanciesViewModelFactory(
+    private val savedVacancyViewModel: SavedVacancyViewModel by activityViewModels {
+        VacancyViewModelFactory(
             (activity?.application as JobSeekerApplication).database.vacancyDao()
         )
     }
@@ -45,16 +44,20 @@ class SavedVacanciesFragment : Fragment() {
                             it.salary,
                             it.company,
                             it.location,
-                            it.description
+                            it.description,
+                            it.url
                         )
                 findNavController().navigate(action)
             },
             {
-                savedVacanciesViewModel.deleteVacancy(it)
+                if(it.isSaved) {
+                    it.isSaved = false
+                    savedVacancyViewModel.deleteVacancy(it)
+                }
             }
         )
         binding.vacancyList.adapter = adapter
-        savedVacanciesViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
+        savedVacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
             vacancies.let {
                 adapter.submitList(it)
             }
