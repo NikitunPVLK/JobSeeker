@@ -1,20 +1,57 @@
 package com.example.jobserver.models;
 
-public class Vacancy {
-    public String url;
-    public String title;
-    public String company;
-    public String salary;
-    public String location;
-    public String description;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public Vacancy(String url, String title, String company, String salary, String location, String description) {
+@Data
+@AllArgsConstructor
+@Entity
+@Table(name = "vacancies")
+public class Vacancy {
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column(name = "url",
+            columnDefinition = "text")
+    private String url;
+    @Column(name = "title",
+            columnDefinition = "text")
+    private String title;
+    @Column(name = "company",
+            columnDefinition = "text")
+    private String company;
+    @Column(name = "salary",
+            columnDefinition = "text")
+    private String salary;
+    @Column(name = "location",
+            columnDefinition = "text")
+    private String location;
+    @Column(name = "description",
+            columnDefinition = "text")
+    private String description;
+    @Column(name = "category")
+    private String category;
+
+    public Vacancy() {
+
+    }
+
+    public Vacancy(String url,
+                   String title,
+                   String company,
+                   String salary,
+                   String location,
+                   String description,
+                   String category) {
         this.url = url;
         this.title = title;
         this.company = company;
         this.salary = salary;
         this.location = location;
         this.description = description;
+        this.category = category;
     }
 
     @Override

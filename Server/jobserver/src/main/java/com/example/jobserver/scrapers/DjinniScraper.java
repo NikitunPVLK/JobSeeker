@@ -16,67 +16,67 @@ public class DjinniScraper extends AbstractScraper {
     @Override
     protected void buildUrlToScrape() {
         urlWithCriteria = baseUrl + "/jobs/";
-        addSearchToUrl();
-        addExperienceToUrl();
-        addRegionToUrl();
-        addLocationToUrl();
+//        addSearchToUrl();
+//        addExperienceToUrl();
+//        addRegionToUrl();
+//        addLocationToUrl();
     }
 
-    private void addSearchToUrl() {
-        String search = criteria.search;
-        if (search != null) {
-            if (!search.isEmpty()) {
-                urlWithCriteria += "?keywords=" + search;
-            }
-        }
-    }
-
-    private void addExperienceToUrl() {
-        Experience experience = criteria.experience;
-        if (experience != null) {
-            urlWithCriteria += "&exp_level=" + switch (experience) {
-                case ONE_YEAR -> "1y";
-                case TWO_YEARS -> "2y";
-                case THREE_YEARS -> "3y";
-                case FIVE_YEARS -> "5y";
-            };
-        }
-    }
-
-    private void addRegionToUrl() {
-        String region = criteria.region;
-        if (region != null) {
-            if (!region.isEmpty()) {
-                urlWithCriteria += "&region=" + region;
-            }
-        }
-    }
-
-    // TODO: other regions, remote
-    private void addLocationToUrl() {
-        Location location = criteria.location;
-        if (location != null) {
-            urlWithCriteria += "&location=" + switch (location) {
-                case KYIV -> "kyiv";
-                case VINNYTSYA -> "vinnytsia";
-                case DNIPRO -> "dnipro";
-                case IVANO_FRANKIVSK -> "ivano-frankivsk";
-                case ZHYTOMYR -> "zhytomyr";
-                case ZAPORIZHZHIA -> "zaporizhzhia";
-                case LVIV -> "lviv";
-                case MYKOLAIV -> "mykolaiv";
-                case ODESA -> "odesa";
-                case TERNOPIL -> "ternopil";
-                case KHARKIV -> "kharkiv";
-                case KHMELNYTSKYI -> "khmelnytskyi";
-                case CHERKASY -> "cherkasy";
-                case CHERNIHIV -> "chernihiv";
-                case CHERNIVTSI -> "chernivtsi";
-                case UZHHOROD -> "uzhhorod";
-                default -> "";
-            };
-        }
-    }
+//    private void addSearchToUrl() {
+//        String search = criteria.search;
+//        if (search != null) {
+//            if (!search.isEmpty()) {
+//                urlWithCriteria += "?keywords=" + search;
+//            }
+//        }
+//    }
+//
+//    private void addExperienceToUrl() {
+//        Experience experience = criteria.experience;
+//        if (experience != null) {
+//            urlWithCriteria += "&exp_level=" + switch (experience) {
+//                case ONE_YEAR -> "1y";
+//                case TWO_YEARS -> "2y";
+//                case THREE_YEARS -> "3y";
+//                case FIVE_YEARS -> "5y";
+//            };
+//        }
+//    }
+//
+//    private void addRegionToUrl() {
+//        String region = criteria.region;
+//        if (region != null) {
+//            if (!region.isEmpty()) {
+//                urlWithCriteria += "&region=" + region;
+//            }
+//        }
+//    }
+//
+//    // TODO: other regions, remote
+//    private void addLocationToUrl() {
+//        Location location = criteria.location;
+//        if (location != null) {
+//            urlWithCriteria += "&location=" + switch (location) {
+//                case KYIV -> "kyiv";
+//                case VINNYTSYA -> "vinnytsia";
+//                case DNIPRO -> "dnipro";
+//                case IVANO_FRANKIVSK -> "ivano-frankivsk";
+//                case ZHYTOMYR -> "zhytomyr";
+//                case ZAPORIZHZHIA -> "zaporizhzhia";
+//                case LVIV -> "lviv";
+//                case MYKOLAIV -> "mykolaiv";
+//                case ODESA -> "odesa";
+//                case TERNOPIL -> "ternopil";
+//                case KHARKIV -> "kharkiv";
+//                case KHMELNYTSKYI -> "khmelnytskyi";
+//                case CHERKASY -> "cherkasy";
+//                case CHERNIHIV -> "chernihiv";
+//                case CHERNIVTSI -> "chernivtsi";
+//                case UZHHOROD -> "uzhhorod";
+//                default -> "";
+//            };
+//        }
+//    }
 
     @Override
     protected int getPages(Document document) {
@@ -132,5 +132,10 @@ public class DjinniScraper extends AbstractScraper {
         Elements textBlocks = doc.getElementsByClass("profile-page-section");
         textBlocks.remove(textBlocks.size() - 1);
         return textBlocks.toString();
+    }
+
+    @Override
+    protected String getCategory() {
+        return "";
     }
 }

@@ -27,6 +27,11 @@ interface VacanciesApiService {
         @Query("region") region: String,
         @Query("location") location: String
     ): List<Vacancy>
+
+    @GET("skills")
+    suspend fun getVacanciesBySkills(
+        @Query("skill") skills: List<String>
+    ): List<Vacancy>
 }
 
 object VacanciesApi {

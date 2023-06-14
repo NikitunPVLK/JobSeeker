@@ -12,6 +12,9 @@ class VacancyViewModelFactory(private var vacancyDao: VacancyDao? = null) : View
         else if (modelClass.isAssignableFrom(SavedVacancyViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST") return SavedVacancyViewModel(vacancyDao!!) as T
         }
+        else if (modelClass.isAssignableFrom(SkillBasedSearchViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST") return SkillBasedSearchViewModel() as T
+        }
         throw IllegalArgumentException("Unknown ViewModel class" + modelClass::class.simpleName)
     }
 }

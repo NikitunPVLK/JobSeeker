@@ -37,6 +37,10 @@ class SearchParametersFragment : Fragment() {
                     .actionSearchParametersFragmentToSavedVacanciesFragment()
             findNavController().navigate(action)
         }
+        binding.floatingActionButton2.setOnClickListener {
+            val action = SearchParametersFragmentDirections.actionSearchParametersFragmentToSkillsBasedSearchFragment()
+            findNavController().navigate(action)
+        }
         return binding.root
     }
 

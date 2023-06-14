@@ -1,6 +1,19 @@
 package com.example.jobseeker.fragments
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.jobseeker.R
+import com.example.jobseeker.databinding.FragmentSearchParametersBinding
+import com.example.jobseeker.databinding.FragmentSkillsBasedSearchBinding
+import com.example.jobseeker.databinding.FragmentVacanciesListBinding
+import com.example.jobseeker.model.SkillBasedSearchViewModel
+import com.example.jobseeker.model.VacancyViewModel
+import com.example.jobseeker.model.VacancyViewModelFactory
 
 /**
  * A simple [Fragment] subclass.
@@ -8,5 +21,33 @@ import androidx.fragment.app.Fragment
  * create an instance of this fragment.
  */
 class SkillsBasedSearchFragment : Fragment() {
+
+    private val viewModel: SkillBasedSearchViewModel by activityViewModels {
+        VacancyViewModelFactory()
+    }
+
+    private var _binding: FragmentSkillsBasedSearchBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentSkillsBasedSearchBinding.inflate(inflater, container, false)
+        binding.searchButton.setOnClickListener {
+            submitSearchParameters()
+        }
+        return binding.root
+    }
+
+    private fun submitSearchParameters() {
+        viewModel.submitSkills(binding.skillsInput.text.toString())
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }

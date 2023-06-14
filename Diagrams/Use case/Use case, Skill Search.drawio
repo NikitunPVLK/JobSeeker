@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-06-11T21:27:55.668Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="kC-7D0O6zrmFmILInaOJ" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="FZonyxAhu3mv1DBqGA7c">
+    <mxGraphModel dx="1434" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g3P1cT6zpstf146VQ_4a-1" value="Користувач" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-2" value="Пошук вакансій за навичками" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="140" width="830" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-4" value="Введення навичок" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="285" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-5" value="Натиснення кнопки &quot;Search&quot;" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-10" value="Звернення до серверу" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-11" value="Отримання категорій за навичками" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-4" target="g3P1cT6zpstf146VQ_4a-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="370" as="sourcePoint" />
+            <mxPoint x="490" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-17" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-5" target="g3P1cT6zpstf146VQ_4a-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="310" as="sourcePoint" />
+            <mxPoint x="530" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-18" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-10" target="g3P1cT6zpstf146VQ_4a-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="220" as="sourcePoint" />
+            <mxPoint x="435" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-24" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-1" target="g3P1cT6zpstf146VQ_4a-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="370" as="sourcePoint" />
+            <mxPoint x="490" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-25" value="PostgreSQL" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1040" y="280" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-26" value="Модель для аналізу даних" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-27" value="Отримання вакансій за категоріями" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="285" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-11" target="g3P1cT6zpstf146VQ_4a-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-27" target="g3P1cT6zpstf146VQ_4a-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g3P1cT6zpstf146VQ_4a-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="g3P1cT6zpstf146VQ_4a-11" target="g3P1cT6zpstf146VQ_4a-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

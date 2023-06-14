@@ -6,5 +6,5 @@ import com.example.jobserver.models.Vacancy;
 import java.util.List;
 
 public interface IScraper {
-    List<Vacancy> scrape(Criteria criteria);
+    List<Vacancy> scrape();
 }

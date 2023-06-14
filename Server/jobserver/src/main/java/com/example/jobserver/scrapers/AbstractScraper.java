@@ -14,12 +14,10 @@ import java.util.List;
 public abstract class AbstractScraper implements IScraper {
 
     protected String baseUrl;
-    protected Criteria criteria;
     protected String urlWithCriteria;
     protected Element currentVacancy;
 
-    public List<Vacancy> scrape(Criteria criteria) {
-        this.criteria = criteria;
+    public List<Vacancy> scrape() {
         buildUrlToScrape();
         List<Vacancy> vacancies = new ArrayList<>();
         Document doc;
@@ -54,7 +52,8 @@ public abstract class AbstractScraper implements IScraper {
         String salary = getSalary();
         String location = getLocation();
         String description = getDescription(url);
-        return new Vacancy(url, title, company, salary, location, description);
+        String category = getCategory();
+        return new Vacancy(url, title, company, salary, location, description, category);
     }
 
     protected abstract void buildUrlToScrape();
@@ -76,4 +75,6 @@ public abstract class AbstractScraper implements IScraper {
     protected abstract String getLocation();
 
     protected abstract String getDescription(String url) throws IOException;
+
+    protected abstract String getCategory();
 }

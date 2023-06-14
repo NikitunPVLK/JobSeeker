@@ -1,0 +1,31 @@
+package com.example.jobserver.data;
+
+import com.example.jobserver.models.Vacancy;
+import com.example.jobserver.specification.ParameterSearchSpecification;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class VacancyService {
+    @Autowired
+    private VacancyRepository vacancyRepository;
+
+    public void saveVacancy(Vacancy vacancy) {
+        vacancyRepository.save(vacancy);
+    }
+
+    public void saveVacancies(List<Vacancy> vacancies) {
+        vacancyRepository.saveAll(vacancies);
+    }
+
+    public List<Vacancy> getAllVacancies() {
+        return vacancyRepository.findAll();
+    }
+
+    public List<Vacancy> findAllByCriteria(Specification<Vacancy> specification) {
+        return vacancyRepository.findAll(specification);
+    }
+}

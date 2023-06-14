@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2023-06-11T19:17:03.792Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="qFgYzUafZqo3GnnjeDjo" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="ehVKfYRPDIj30GhMu1gB">
+    <mxGraphModel dx="683" dy="333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="310" y="170" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-107" value="" style="dashed=0;shape=rect;fillColor=#ffffff;strokeColor=#eeeeee;shadow=1;fontColor=#000000;fontSize=24;fontStyle=0;verticalAlign=top;spacingBottom=0;spacingLeft=16;spacingTop=15;align=left;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="319.5" y="290" width="181" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-112" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Vacancy Title #1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry width="120" height="45.34883720930234" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-113" value="Salary" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry y="30" width="40.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-114" value="Company" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry y="49.99909090909092" width="60" height="23.080909090909092" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-115" value="Location" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry x="5" y="73.08" width="50" height="23.636363636363637" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-116" value="Short description" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry x="35.5" y="100" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-117" value="Save" style="whiteSpace=wrap;html=1;dashed=0;align=center;fontSize=12;shape=rect;fillColor=#2196F3;strokeColor=none;fontStyle=1;shadow=1;fontColor=#ffffff;" parent="pUqxV5sflyoYG3Z1NF0k-107" vertex="1">
+          <mxGeometry x="130.5" y="4" width="40" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-118" value="" style="dashed=0;shape=rect;fillColor=#ffffff;strokeColor=#eeeeee;shadow=1;fontColor=#000000;fontSize=24;fontStyle=0;verticalAlign=top;spacingBottom=0;spacingLeft=16;spacingTop=15;align=left;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="319.5" y="423.64" width="181" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-125" value="Search parameters" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="380" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_F--HiQlKTcHZyVUSN-1" value="Vacancy list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;strokeColor=#2196F3;" vertex="1" parent="1">
+          <mxGeometry x="318" y="205" width="185" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_F--HiQlKTcHZyVUSN-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=8.8;endSize=6.011627906976745;width=4.186046511627907;strokeColor=#FFFFFF;fillColor=default;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="222" as="sourcePoint" />
+            <mxPoint x="323" y="222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-123" value="Short description" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="359" y="493.64" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-122" value="Location" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="319.5" y="480" width="50" height="23.636363636363637" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-121" value="Company" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="318" y="462.09909090909093" width="60" height="23.080909090909092" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-120" value="Salary" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="318" y="450" width="40.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-119" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Vacancy Title #2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="318" y="414.65" width="120" height="45.34883720930234" as="geometry" />
+        </mxCell>
+        <mxCell id="pUqxV5sflyoYG3Z1NF0k-124" value="Save" style="whiteSpace=wrap;html=1;dashed=0;align=center;fontSize=12;shape=rect;fillColor=#2196F3;strokeColor=none;fontStyle=1;shadow=1;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="455" y="428" width="40" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

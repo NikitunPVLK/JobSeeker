@@ -1,91 +1,152 @@
 package com.example.jobserver.scrapers;
 
-import com.example.jobserver.models.Experience;
-import com.example.jobserver.models.Location;
+import com.example.jobserver.models.Vacancy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DouScraper extends AbstractScraper {
+
+    private final List<String> CATEGORIES = Arrays.asList(
+            ".NET",
+            "Analyst",
+            "Android",
+            "Animator",
+            "Architect",
+            "Artist",
+            "Big Data",
+            "Blockchain",
+            "C++",
+            "C-level",
+            "Copywriter",
+            "Data Science",
+            "DBA",
+            "Design",
+            "DevOps",
+            "Embedded",
+            "Engineering Manager",
+            "Erlang",
+            "ERP/CRM",
+            "Finance",
+            "Flutter",
+            "Front End",
+            "Golang",
+            "HR",
+            "iOS/macOS",
+            "Java",
+            "Legal",
+            "Marketing",
+            "Node.js",
+            "Office Manager",
+            "Other",
+            "PHP",
+            "Product Manager",
+            "Project Manager",
+            "Python",
+            "QA",
+            "React Native",
+            "Ruby",
+            "Rust",
+            "Sales",
+            "Salesforce",
+            "SAP",
+            "Scala",
+            "Scrum Master",
+            "Security",
+            "SEO",
+            "Support",
+            "SysAdmin",
+            "Technical Writer",
+            "Unity",
+            "Unreal Engine"
+    );
+
+    private String currentCategory;
 
     public DouScraper() {
         baseUrl = "https://jobs.dou.ua/vacancies/";
     }
 
     @Override
+    public List<Vacancy> scrape() {
+        List<Vacancy> vacancies = new ArrayList<>();
+        for (String category : CATEGORIES) {
+            currentCategory = category;
+            vacancies.addAll(super.scrape());
+            System.out.println("FINISHED SCRAPING CATEGORY: " + currentCategory);
+        }
+        return vacancies;
+    }
+
+    @Override
     protected void buildUrlToScrape() {
         urlWithCriteria = baseUrl + "?";
-        addLocationToUrl();
         addCategoryToUrl();
-        addSearchToUrl();
-        addExperienceToUrl();
     }
 
-    private void addLocationToUrl() {
-        Location location = criteria.location;
-        if (location != null) {
-            urlWithCriteria += "city=" + switch (location) {
-                case KYIV -> "Київ";
-                case LVIV -> "Львів";
-                case DNIPRO -> "Дніпро";
-                case ODESA -> "Одеса";
-                case VINNYTSYA -> "Вінниця";
-                case KHARKIV -> "Харків";
-                case IVANO_FRANKIVSK -> "Івано-Франківськ";
-                case TERNOPIL -> "Тернопіль";
-                case CHERNIVTSI -> "Чернівці";
-                case LUTSK -> "Луцьк";
-                case CHERKASY -> "Черкаси";
-                case UZHHOROD -> "Ужгород";
-                case POLTAVA -> "Полтава";
-                case RIVNE -> "Рівне";
-                case SUMY -> "Суми";
-                case KHMELNYTSKYI -> "Хмельницький";
-                case ZHYTOMYR -> "Житомир";
-                case ZAPORIZHZHIA -> "Запоріжжя";
-                case KREMENCHUK -> "Кременчук";
-                case MYKOLAIV -> "Миколаїв";
-                case CHERNIHIV -> "Чернігів";
-                case DROGOBYCH -> "Дрогобич";
-                case KROPYVNYTSKYI -> "Кропивницький";
-                case KHERSON -> "Херсон";
-                case REMOTE -> "&remote";
-                case RELOCATION -> "&relocation";
-                default -> "";
-            };
-        }
-    }
-
+//    private void addLocationToUrl() {
+//        Location location = criteria.location;
+//        if (location != null) {
+//            urlWithCriteria += "city=" + switch (location) {
+//                case KYIV -> "Київ";
+//                case LVIV -> "Львів";
+//                case DNIPRO -> "Дніпро";
+//                case ODESA -> "Одеса";
+//                case VINNYTSYA -> "Вінниця";
+//                case KHARKIV -> "Харків";
+//                case IVANO_FRANKIVSK -> "Івано-Франківськ";
+//                case TERNOPIL -> "Тернопіль";
+//                case CHERNIVTSI -> "Чернівці";
+//                case LUTSK -> "Луцьк";
+//                case CHERKASY -> "Черкаси";
+//                case UZHHOROD -> "Ужгород";
+//                case POLTAVA -> "Полтава";
+//                case RIVNE -> "Рівне";
+//                case SUMY -> "Суми";
+//                case KHMELNYTSKYI -> "Хмельницький";
+//                case ZHYTOMYR -> "Житомир";
+//                case ZAPORIZHZHIA -> "Запоріжжя";
+//                case KREMENCHUK -> "Кременчук";
+//                case MYKOLAIV -> "Миколаїв";
+//                case CHERNIHIV -> "Чернігів";
+//                case DROGOBYCH -> "Дрогобич";
+//                case KROPYVNYTSKYI -> "Кропивницький";
+//                case KHERSON -> "Херсон";
+//                case REMOTE -> "&remote";
+//                case RELOCATION -> "&relocation";
+//                default -> "";
+//            };
+//        }
+//    }
+//
     protected void addCategoryToUrl() {
-        String category = criteria.category;
-        if (category != null) {
-            if (!category.isEmpty()) {
-                urlWithCriteria += "&category=" + category;
-            }
-        }
+        urlWithCriteria += "&category=" + currentCategory;
     }
-
-    private void addSearchToUrl() {
-        String search = criteria.search;
-        if (search != null) {
-            if (!search.isEmpty()) {
-                urlWithCriteria += "&search=" + search;
-            }
-        }
-    }
-
-    private void addExperienceToUrl() {
-        Experience experience = criteria.experience;
-        if (experience != null) {
-            urlWithCriteria += "&exp=" + switch (experience) {
-                case ONE_YEAR, TWO_YEARS -> "1-3";
-                case THREE_YEARS -> "3-5";
-                case FIVE_YEARS -> "5plus";
-            };
-        }
-    }
+//
+//    private void addSearchToUrl() {
+//        String search = criteria.search;
+//        if (search != null) {
+//            if (!search.isEmpty()) {
+//                urlWithCriteria += "&search=" + search;
+//            }
+//        }
+//    }
+//
+//    private void addExperienceToUrl() {
+//        Experience experience = criteria.experience;
+//        if (experience != null) {
+//            urlWithCriteria += "&exp=" + switch (experience) {
+//                case ONE_YEAR, TWO_YEARS -> "1-3";
+//                case THREE_YEARS -> "3-5";
+//                case FIVE_YEARS -> "5plus";
+//            };
+//        }
+//    }
 
     //TODO pages
     @Override
@@ -134,5 +195,10 @@ public class DouScraper extends AbstractScraper {
         Document doc = Jsoup.connect(url).get();
         Elements textBlocks = doc.getElementsByClass("text b-typo vacancy-section");
         return textBlocks.toString();
+    }
+
+    @Override
+    protected String getCategory() {
+        return currentCategory;
     }
 }

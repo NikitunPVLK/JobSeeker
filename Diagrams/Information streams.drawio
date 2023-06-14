@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" modified="2023-06-11T17:28:12.797Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="ehWR8m1wlssCZurJrc27" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="jnABIzqMDfMFTUbGlCkA">
+    <mxGraphModel dx="819" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-1" value="Мобільний застосунок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="kUI27pNiMNTPG3XtqJSU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="200" as="sourcePoint" />
+            <mxPoint x="400" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-3" value="Введення ключових слів" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="kUI27pNiMNTPG3XtqJSU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="350" as="sourcePoint" />
+            <mxPoint x="270" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-5" value="Введення категорії" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="70" y="220" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-6" value="Введення досвіду" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="32.5" y="270" width="205" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="kUI27pNiMNTPG3XtqJSU-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="300" as="sourcePoint" />
+            <mxPoint x="512" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.335;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="kUI27pNiMNTPG3XtqJSU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="250" as="sourcePoint" />
+            <mxPoint x="270" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-9" value="Введення локації" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="75" y="310" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kUI27pNiMNTPG3XtqJSU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480.0000000000002" y="273.84000000000003" as="sourcePoint" />
+            <mxPoint x="640" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-18" value="Відображення списку вакансій" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="471" y="250" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="kUI27pNiMNTPG3XtqJSU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="40" as="sourcePoint" />
+            <mxPoint x="420" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kUI27pNiMNTPG3XtqJSU-22" value="Створення та надсилання &lt;br&gt;запиту до серверу" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="170" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

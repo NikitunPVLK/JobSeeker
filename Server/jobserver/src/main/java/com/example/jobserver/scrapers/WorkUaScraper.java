@@ -20,33 +20,33 @@ public class WorkUaScraper extends AbstractScraper {
     @Override
     protected void buildUrlToScrape() {
         urlWithCriteria = baseUrl + "/ru/jobs";
-        addLocationToUrl();
-        addSearchToUrl();
+//        addLocationToUrl();
+//        addSearchToUrl();
     }
-
-    private void addLocationToUrl() {
-        Location location = criteria.location;
-        if (location != null) {
-            urlWithCriteria += switch (location) {
-                case LVIV -> "-lviv";
-                case KYIV -> "-kyiv";
-                case DNIPRO -> "-dnipro";
-                case ODESA -> "-odesa";
-                case REMOTE -> "-remote";
-                case RELOCATION -> "-other";
-                default -> "";
-            };
-        }
-    }
-
-    private void addSearchToUrl() {
-        String search = criteria.search;
-        if (search != null) {
-            if (!search.isEmpty()) {
-                urlWithCriteria += "-" + search;
-            }
-        }
-    }
+//
+//    private void addLocationToUrl() {
+//        Location location = criteria.location;
+//        if (location != null) {
+//            urlWithCriteria += switch (location) {
+//                case LVIV -> "-lviv";
+//                case KYIV -> "-kyiv";
+//                case DNIPRO -> "-dnipro";
+//                case ODESA -> "-odesa";
+//                case REMOTE -> "-remote";
+//                case RELOCATION -> "-other";
+//                default -> "";
+//            };
+//        }
+//    }
+//
+//    private void addSearchToUrl() {
+//        String search = criteria.search;
+//        if (search != null) {
+//            if (!search.isEmpty()) {
+//                urlWithCriteria += "-" + search;
+//            }
+//        }
+//    }
 
     @Override
     protected int getPages(Document document) {
@@ -129,5 +129,10 @@ public class WorkUaScraper extends AbstractScraper {
         Document doc = Jsoup.connect(url).get();
         Element descriptionElement = doc.getElementById("job-description");
         return descriptionElement.toString();
+    }
+
+    @Override
+    protected String getCategory() {
+        return "";
     }
 }
