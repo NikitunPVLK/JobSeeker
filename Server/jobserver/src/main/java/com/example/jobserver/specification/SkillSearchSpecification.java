@@ -1,11 +1,25 @@
 package com.example.jobserver.specification;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
-import org.springframework.data.jpa.domain.Specification;
+import jakarta.persistence.criteria.*;
 
-public interface SkillSearchSpecification<T> extends Specification<T> {
-    Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder);
+import java.util.List;
+
+public class SkillSearchSpecificationImpl extends AbstractSearchSpecification {
+    private final List<String> categories;
+
+    public SkillSearchSpecificationImpl(List<String> categories) {
+        this.categories = categories;
+    }
+
+    @Override
+    protected Predicate buildPredicate(Root root, CriteriaBuilder criteriaBuilder) {
+        Predicate predicate = criteriaBuilder.conjunction();
+        if (categories != null && !categories.isEmpty()) {
+            Expression<String> categoryExpression = root.get("category");
+
+            predicate = criteriaBuilder.and(predicate, categoryExpression.in(categories));
+        }
+
+        return predicate;
+    }
 }
