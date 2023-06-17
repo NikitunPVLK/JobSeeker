@@ -31,16 +31,16 @@ class SearchParametersFragment : Fragment() {
         setupCategoryAutoComplete()
         setupExperienceSpinner()
         setupLocationAutoComplete()
-        binding.floatingActionButton.setOnClickListener {
-            val action =
-                SearchParametersFragmentDirections
-                    .actionSearchParametersFragmentToSavedVacanciesFragment()
-            findNavController().navigate(action)
-        }
-        binding.floatingActionButton2.setOnClickListener {
-            val action = SearchParametersFragmentDirections.actionSearchParametersFragmentToSkillsBasedSearchFragment()
-            findNavController().navigate(action)
-        }
+//        binding.floatingActionButton.setOnClickListener {
+//            val action =
+//                SearchParametersFragmentDirections
+//                    .actionSearchParametersFragmentToSavedVacanciesFragment()
+//            findNavController().navigate(action)
+//        }
+//        binding.floatingActionButton2.setOnClickListener {
+//            val action = SearchParametersFragmentDirections.actionSearchParametersFragmentToSkillsBasedSearchFragment()
+//            findNavController().navigate(action)
+//        }
         return binding.root
     }
 
