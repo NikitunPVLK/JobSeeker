@@ -1,11 +1,42 @@
 package com.example.jobserver.specification;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import org.springframework.data.jpa.domain.Specification;
 
-public interface ParameterSearchSpecification<T> extends Specification<T> {
-    Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder);
+public class ParameterSearchSpecificationImpl extends AbstractSearchSpecification {
+    private final String keyWords;
+    private final String experience;
+    private final String category;
+    private final String location;
+
+    public ParameterSearchSpecificationImpl(String keyWords, String experience, String category, String location) {
+        this.keyWords = keyWords;
+        this.experience = experience;
+        this.category = category;
+        this.location = location;
+    }
+
+    @Override
+    protected Predicate buildPredicate(Root root, CriteriaBuilder criteriaBuilder) {
+        Predicate predicate = criteriaBuilder.conjunction();
+
+        if (!keyWords.isEmpty()) {
+            String searchTerm = "%" + keyWords.toLowerCase() + "%";
+            predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(criteriaBuilder.lower(root.get("title")), searchTerm));
+        }
+
+//        if (!experience.isEmpty()) {
+//            predicate = criteriaBuilder.and(predicate, criteriaBuilder.)
+//        }
+        if (!category.isEmpty()) {
+            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("category"), category));
+        }
+
+        if (!location.isEmpty()) {
+            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("location"), location));
+        }
+
+        return predicate;
+    }
 }

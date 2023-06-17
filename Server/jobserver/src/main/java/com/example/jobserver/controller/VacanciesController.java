@@ -1,13 +1,11 @@
 package com.example.jobserver.controllers;
 
-import com.example.jobserver.PythonRunner;
 import com.example.jobserver.data.VacancyService;
 import com.example.jobserver.models.Vacancy;
 import com.example.jobserver.scrapers.ScrapeManager;
 import com.example.jobserver.specification.ParameterSearchSpecificationImpl;
 import com.example.jobserver.specification.SkillSearchSpecificationImpl;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,8 +41,8 @@ public class VacanciesController {
 
     @GetMapping("/skills")
     public String getVacanciesBySkills(@RequestParam(name = "skill") List<String> skills) {
-        PythonRunner pythonRunner = new PythonRunner();
-        String modelResult = pythonRunner.getCategoryFromModel(skills);
+        NlpModelRunner nlpModelRunner = new NlpModelRunner();
+        String modelResult = nlpModelRunner.getCategoryFromModel(skills);
         System.out.println(modelResult);
         List<String> categories = Arrays.asList(modelResult
                 .replace("[", "")
