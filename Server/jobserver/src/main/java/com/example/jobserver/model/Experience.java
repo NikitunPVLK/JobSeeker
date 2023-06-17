@@ -1,4 +1,4 @@
-package com.example.jobserver.models;
+package com.example.jobserver.model;
 
 public enum Experience {
     ONE_YEAR,

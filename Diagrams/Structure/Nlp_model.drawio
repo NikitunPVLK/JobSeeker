@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-06-14T18:34:46.375Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="px26adcoF8cAkPNvCp--" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="iUrbq3yomEeuG5h_AYpE">
+    <mxGraphModel dx="1434" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-1" value="NLP model" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="500" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-2" value="dataset" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="320" y="170" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-3" value="model" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="70" y="170" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-5" value="skills_analyze_model_creation.ipynb" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="80" y="205" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-6" value="skills_analyze_model.pkl" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-7" value="run_skills_analyze_model.py" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="330" y="280" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-nu_bZXC0OwV-_SdzrXY-4" value="large_dataset_with_labels.csv" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="330" y="205" width="210" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

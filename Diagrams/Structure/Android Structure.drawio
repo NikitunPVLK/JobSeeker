@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" modified="2023-06-14T16:16:52.669Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="AFMAK9YuHkD1zSDsxBMq" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="8nJ7Dbh8ndoQpxTzG627">
+    <mxGraphModel dx="989" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-1" value="Android застосунок" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="120" y="240" width="680" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-2" value="adapter" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="360" y="640" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-3" value="fragment" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="130" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-4" value="model" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="660" y="460" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-5" value="network" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="660" y="280" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-6" value="layout" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="130" y="280" width="210" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-7" value="VacancyList&lt;br&gt;Adapter" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="680" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-9" value="data" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="660" y="580" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-10" value="VacancyRoom&lt;br&gt;Database" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672.5" y="680" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-8" value="VacancyDao" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672.5" y="620" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-12" value="DetailedVacancy&lt;br&gt;Fragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="320" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-13" value="SavedVacancies&lt;br&gt;Fragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="380" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-14" value="SearchParameters&lt;br&gt;Fragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="440" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-15" value="SkillsBasedSearch&lt;br&gt;Fragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="500" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-16" value="VacanciesList&lt;br&gt;Fragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="372.5" y="560" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-17" value="VacanciesApi&lt;br&gt;Service" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672.5" y="380" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-18" value="VacanciesApi" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672.5" y="320" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-19" value="Vacancy" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672.5" y="500" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-20" value="viewmodel" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="510" y="280" width="130" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-21" value="SavedVacancy&lt;br&gt;ViewModel" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="320" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-22" value="SkillBasedSearch&lt;br&gt;ViewModel" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="380" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-23" value="Vacancy&lt;br&gt;ViewModel" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="440" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-24" value="Vacancy&lt;br&gt;ViewModel&lt;br&gt;Factory" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="500" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-25" value="activity_main.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="182.5" y="320" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-26" value="fragment_detailed_vacancy.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="380" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-27" value="fragment_saved_vacancies.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="440" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-28" value="fragment_search_parameters.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="500" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-29" value="fragment_skills_based_search.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="560" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-30" value="fragment_vacancies_list.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="620" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-31" value="vacancy_list_item.xml" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="140" y="680" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-34" value="application" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="510" y="580" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-32" value="JobSeeker&lt;br&gt;Application" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="620" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixnLaHFbO3xZVxNMmLVP-33" value="MainActivity" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="680" width="105" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

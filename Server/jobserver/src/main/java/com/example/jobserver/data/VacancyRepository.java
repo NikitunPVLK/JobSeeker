@@ -1,9 +1,8 @@
 package com.example.jobserver.data;
 
-import com.example.jobserver.models.Vacancy;
+import com.example.jobserver.model.Vacancy;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 

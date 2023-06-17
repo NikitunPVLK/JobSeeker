@@ -1,4 +1,4 @@
-package com.example.jobserver.controllers;
+package com.example.jobserver.nlp_model_runner;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class NlpModelRunner {
         StringBuilder result = new StringBuilder();
         try {
             // Command to execute the Python script with arguments
-            String command = "python C:\\Users\\nikit\\Diploma\\Server\\run_skills_analyze_model.py" + arguments;
+            String command = "python C:\\Users\\nikit\\Diploma\\Server\\NLP_model\\run_skills_analyze_model.py" + arguments;
 
             // Create the ProcessBuilder
             ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));

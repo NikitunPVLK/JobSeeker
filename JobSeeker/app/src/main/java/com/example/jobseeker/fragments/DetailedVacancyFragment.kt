@@ -2,17 +2,12 @@ package com.example.jobseeker.fragments
 
 import android.os.Bundle
 import android.text.Html
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.example.jobseeker.databinding.FragmentDetailedVacancyBinding
-import com.example.jobseeker.model.Vacancy
-import com.example.jobseeker.model.VacancyViewModel
-import com.example.jobseeker.model.VacancyViewModelFactory
 
 class DetailedVacancyFragment : Fragment() {
     private val navigationArgs: DetailedVacancyFragmentArgs by navArgs()

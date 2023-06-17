@@ -1,10 +1,10 @@
-package com.example.jobserver.controllers;
+package com.example.jobserver.controller;
 
 import com.example.jobserver.data.VacancyService;
-import com.example.jobserver.models.Vacancy;
-import com.example.jobserver.scrapers.ScrapeManager;
-import com.example.jobserver.specification.ParameterSearchSpecificationImpl;
-import com.example.jobserver.specification.SkillSearchSpecificationImpl;
+import com.example.jobserver.model.Vacancy;
+import com.example.jobserver.nlp_model_runner.NlpModelRunner;
+import com.example.jobserver.specification.ParameterSearchSpecification;
+import com.example.jobserver.specification.SkillSearchSpecification;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,12 +22,12 @@ public class VacanciesController {
 
     @GetMapping("/vacancies")
     public String getVacancies(@RequestParam(name = "search") String search,
-                               @RequestParam(name = "category") String category,
-                               @RequestParam(name = "experience") String experience,
-                               @RequestParam(name = "region") String region,
-                               @RequestParam(name = "location") String location
+                                      @RequestParam(name = "category") String category,
+                                      @RequestParam(name = "experience") String experience,
+                                      @RequestParam(name = "region") String region,
+                                      @RequestParam(name = "location") String location
     ) {
-        ParameterSearchSpecificationImpl specification = new ParameterSearchSpecificationImpl(search, experience, category, location);
+        ParameterSearchSpecification specification = new ParameterSearchSpecification(search, experience, category, location);
         List<Vacancy> vacancies = vacancyService.findAllByCriteria(specification);
 //        Criteria criteria = new Criteria(search,
 //                category,
@@ -37,6 +37,7 @@ public class VacanciesController {
 //        scrapeManager.setVacancyService(vacancyService);
 //        List<Vacancy> result = scrapeManager.getVacanciesByCriteria(criteria);
         return gson.toJsonTree(vacancies).getAsJsonArray().toString();
+//        return vacancies;
     }
 
     @GetMapping("/skills")
@@ -52,17 +53,9 @@ public class VacanciesController {
                 .replace("]", "")
                 .split(","));
         System.out.println(categories);
-        SkillSearchSpecificationImpl skillSearchSpecification = new SkillSearchSpecificationImpl(categories);
+        SkillSearchSpecification skillSearchSpecification = new SkillSearchSpecification(categories);
 
         List<Vacancy> vacancies = vacancyService.findAllByCriteria(skillSearchSpecification);
         return gson.toJsonTree(vacancies).getAsJsonArray().toString();
-    }
-
-    @GetMapping("/scrapers")
-    public String runScrapers() {
-        ScrapeManager scrapeManager = ScrapeManager.getInstance();
-        scrapeManager.setVacancyService(vacancyService);
-        scrapeManager.runScrapers();
-        return "";
     }
 }

@@ -1,7 +1,7 @@
-package com.example.jobserver.scrapers;
+package com.example.jobserver.scraper;
 
 import com.example.jobserver.data.VacancyService;
-import com.example.jobserver.models.Vacancy;
+import com.example.jobserver.model.Vacancy;
 
 import java.util.Arrays;
 import java.util.List;

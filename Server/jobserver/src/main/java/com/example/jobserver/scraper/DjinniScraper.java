@@ -1,7 +1,5 @@
-package com.example.jobserver.scrapers;
+package com.example.jobserver.scraper;
 
-import com.example.jobserver.models.Experience;
-import com.example.jobserver.models.Location;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

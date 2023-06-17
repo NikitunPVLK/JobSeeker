@@ -4,10 +4,10 @@ import jakarta.persistence.criteria.*;
 
 import java.util.List;
 
-public class SkillSearchSpecificationImpl extends AbstractSearchSpecification {
+public class SkillSearchSpecification extends AbstractSearchSpecification {
     private final List<String> categories;
 
-    public SkillSearchSpecificationImpl(List<String> categories) {
+    public SkillSearchSpecification(List<String> categories) {
         this.categories = categories;
     }
 
