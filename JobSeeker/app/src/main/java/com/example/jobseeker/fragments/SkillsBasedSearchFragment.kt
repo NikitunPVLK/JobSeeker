@@ -6,14 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import com.example.jobseeker.R
-import com.example.jobseeker.databinding.FragmentSearchParametersBinding
 import com.example.jobseeker.databinding.FragmentSkillsBasedSearchBinding
-import com.example.jobseeker.databinding.FragmentVacanciesListBinding
-import com.example.jobseeker.model.SkillBasedSearchViewModel
-import com.example.jobseeker.model.VacancyViewModel
-import com.example.jobseeker.model.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.SkillBasedSearchViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModelFactory
 
 /**
  * A simple [Fragment] subclass.

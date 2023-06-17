@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-06-15T20:52:38.056Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="5YC5fE8NEEttWsaN356a" version="21.4.0" type="device">
+  <diagram name="Страница 1" id="s9cYkDyTKvh4SyGFuiO7">
+    <mxGraphModel dx="1434" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-1" value="Оператор системи" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="305" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-2" value="Оновлення бази даних вакансій" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="140" width="830" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-3" value="Передача API-ключу" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="310" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-4" value="Перевірка API-ключу" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-5" value="Запуск скраперів" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-6" value="Отримання вакансій" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="185" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-3" target="px5ImTFJh5NhTPMIKyo0-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="370" as="sourcePoint" />
+            <mxPoint x="490" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-8" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-4" target="px5ImTFJh5NhTPMIKyo0-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="310" as="sourcePoint" />
+            <mxPoint x="530" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-9" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-5" target="px5ImTFJh5NhTPMIKyo0-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="220" as="sourcePoint" />
+            <mxPoint x="435" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-10" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-1" target="px5ImTFJh5NhTPMIKyo0-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="395" as="sourcePoint" />
+            <mxPoint x="490" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-11" value="PostgreSQL" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1040" y="305" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-12" value="Сайти з вакансіями" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1040" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-13" value="Збереження вакансій" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="310" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-13" target="px5ImTFJh5NhTPMIKyo0-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-6" target="px5ImTFJh5NhTPMIKyo0-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="px5ImTFJh5NhTPMIKyo0-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="px5ImTFJh5NhTPMIKyo0-12" target="px5ImTFJh5NhTPMIKyo0-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="340" as="sourcePoint" />
+            <mxPoint x="760" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

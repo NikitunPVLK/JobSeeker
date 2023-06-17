@@ -4,13 +4,13 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 
-public class ParameterSearchSpecificationImpl extends AbstractSearchSpecification {
+public class ParameterSearchSpecification extends AbstractSearchSpecification {
     private final String keyWords;
     private final String experience;
     private final String category;
     private final String location;
 
-    public ParameterSearchSpecificationImpl(String keyWords, String experience, String category, String location) {
+    public ParameterSearchSpecification(String keyWords, String experience, String category, String location) {
         this.keyWords = keyWords;
         this.experience = experience;
         this.category = category;

@@ -1,9 +1,10 @@
-package com.example.jobseeker.model
+package com.example.jobseeker.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.VacancyDao
+import com.example.jobseeker.model.Vacancy
 import kotlinx.coroutines.*
 
 

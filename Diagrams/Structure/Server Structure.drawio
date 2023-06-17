@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2023-06-14T18:24:13.035Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="TPCesajcAgstu9qh2miN" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="yNHSev0SknIf30zyxR6d">
+    <mxGraphModel dx="1195" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-1" value="Spring сервер" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="470" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-4" value="controller" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-5" value="data" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="230" y="160" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-6" value="model" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="230" y="330" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-7" value="nlp_model_runner" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="230" y="450" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-8" value="specification" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="130" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-9" value="VacanciesController" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="200" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-10" value="ScrapersController" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="260" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-12" value="VacancyRepository" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="235" y="200" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-13" value="VacancyService" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="235" y="260" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-14" value="Vacancy" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="235" y="370" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-16" value="NlpModelRunner" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="235" y="490" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-17" value="scraper" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="380" y="160" width="130" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-18" value="AbstractScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="320" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-19" value="IScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="260" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-20" value="DjinniScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="380" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-21" value="DouScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="440" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-22" value="JobsUaScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="500" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-23" value="WorkUaScraper" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="560" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-24" value="ScrapeManager" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="385" y="200" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-29" value="AbstractSearch&lt;br&gt;Specification" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="370" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-30" value="ParameterSearch&lt;br&gt;Specification" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="430" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M487fHiI0Kwg1-rqhgvg-31" value="SkillSearch&lt;br&gt;Specification" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="490" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

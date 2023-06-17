@@ -1,4 +1,4 @@
-package com.example.jobseeker.model
+package com.example.jobseeker.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

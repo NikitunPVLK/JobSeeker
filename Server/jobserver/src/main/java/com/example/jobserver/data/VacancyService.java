@@ -1,7 +1,6 @@
 package com.example.jobserver.data;
 
-import com.example.jobserver.models.Vacancy;
-import com.example.jobserver.specification.ParameterSearchSpecification;
+import com.example.jobserver.model.Vacancy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.example.jobserver.scrapers;
+package com.example.jobserver.scraper;
 
-import com.example.jobserver.models.Vacancy;
+import com.example.jobserver.model.Vacancy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

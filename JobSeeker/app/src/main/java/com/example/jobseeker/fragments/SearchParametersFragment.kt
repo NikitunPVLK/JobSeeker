@@ -10,8 +10,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchParametersBinding
-import com.example.jobseeker.model.VacancyViewModel
-import com.example.jobseeker.model.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.VacancyViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModelFactory
 
 class SearchParametersFragment : Fragment() {
 

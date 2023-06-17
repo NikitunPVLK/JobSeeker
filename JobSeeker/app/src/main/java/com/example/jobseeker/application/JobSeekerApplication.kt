@@ -1,4 +1,4 @@
-package com.example.jobseeker
+package com.example.jobseeker.application
 
 import android.app.Application
 import com.example.jobseeker.data.VacancyRoomDatabase

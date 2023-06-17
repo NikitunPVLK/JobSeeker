@@ -10,10 +10,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jobseeker.JobSeekerApplication
+import com.example.jobseeker.application.JobSeekerApplication
 import com.example.jobseeker.adapter.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentVacanciesListBinding
-import com.example.jobseeker.model.*
+import com.example.jobseeker.viewmodel.SavedVacancyViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModelFactory
 import kotlinx.coroutines.launch
 
 class VacanciesListFragment : Fragment() {

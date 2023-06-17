@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jobseeker.JobSeekerApplication
+import com.example.jobseeker.application.JobSeekerApplication
 import com.example.jobseeker.adapter.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.model.SavedVacancyViewModel
-import com.example.jobseeker.model.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.SavedVacancyViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModelFactory
 
 class SavedVacanciesFragment : Fragment() {
     private var _binding: FragmentSavedVacanciesBinding? = null

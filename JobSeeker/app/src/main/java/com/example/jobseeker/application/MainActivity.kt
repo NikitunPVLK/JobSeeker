@@ -1,11 +1,11 @@
-package com.example.jobseeker
+package com.example.jobseeker.application
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.jobseeker.databinding.ActivityMainBinding
+import com.example.jobseeker.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 

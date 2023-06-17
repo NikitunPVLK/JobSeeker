@@ -1,9 +1,8 @@
-package com.example.jobserver.models;
+package com.example.jobserver.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
