@@ -31,16 +31,6 @@ class SearchParametersFragment : Fragment() {
         setupCategoryAutoComplete()
         setupExperienceSpinner()
         setupLocationAutoComplete()
-//        binding.floatingActionButton.setOnClickListener {
-//            val action =
-//                SearchParametersFragmentDirections
-//                    .actionSearchParametersFragmentToSavedVacanciesFragment()
-//            findNavController().navigate(action)
-//        }
-//        binding.floatingActionButton2.setOnClickListener {
-//            val action = SearchParametersFragmentDirections.actionSearchParametersFragmentToSkillsBasedSearchFragment()
-//            findNavController().navigate(action)
-//        }
         return binding.root
     }
 
@@ -86,7 +76,12 @@ class SearchParametersFragment : Fragment() {
             binding.experienceSpinner.selectedItem.toString(),
             binding.locationInput.text.toString()
         )
-        findNavController().navigate(R.id.action_searchParametersFragment_to_vacanciesListFragment)
+        val action =
+            SearchParametersFragmentDirections
+                .actionSearchParametersFragmentToVacanciesListFragment(
+                    Destination.PARAMETERS_SEARCH
+                )
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

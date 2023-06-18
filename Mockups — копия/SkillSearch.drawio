@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2023-06-11T19:08:36.084Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="AZ3X5ifVz3zHSZGTP6Fu" version="21.3.8" type="device">
+  <diagram name="Страница 1" id="toYjcOW3sthRbBLexJhN">
+    <mxGraphModel dx="819" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="330" y="120" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-2" value="Skills input" style="text;fontColor=#333333;fontSize=16;verticalAlign=middle;strokeColor=none;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="190" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-3" value="" style="dashed=0;shape=line;strokeWidth=1;noLabel=1;strokeColor=#333333;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="360" y="215" width="140" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-11" value="Search" style="whiteSpace=wrap;html=1;dashed=0;align=center;fontSize=12;shape=rect;fillColor=#2196F3;strokeColor=none;fontStyle=1;shadow=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="390" y="390" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-12" value="" style="dashed=0;align=center;fontSize=12;shape=rect;fillColor=#2196F3;strokeColor=none;shadow=0;hachureGap=4;pointerEvents=0;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="338" y="445" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-13" value="" style="html=1;dashed=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.gmdl.heart;strokeColor=none;fillColor=#FFFFFF;shadow=0;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="451" width="20" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-14" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#FFFFFF;shadow=0;dashed=0;shape=mxgraph.ios7.icons.looking_glass;fillColor=#2196F3;" vertex="1" parent="1">
+          <mxGeometry x="350" y="452.5" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-15" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#FFFFFF;shadow=0;dashed=0;shape=mxgraph.ios7.icons.lightbulb;fillColor=#2196F3;" vertex="1" parent="1">
+          <mxGeometry x="420.90000000000003" y="447.5" width="19.2" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-16" value="Skill #1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-17" value="Skill #2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-18" value="Skill #3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="360.9" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-19" value="Skill #4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L2CwwyfDQJdq0sG1WCza-20" value="Skill #5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196F3;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="360.9" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

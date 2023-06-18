@@ -1,0 +1,249 @@
+<mxfile host="app.diagrams.net" modified="2023-06-18T01:47:08.756Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="IjdJwHPgteU2ZFtds_cp" version="21.4.0" type="device">
+  <diagram name="Страница 1" id="_r1kXuqlrjiEC5xvvMAH">
+    <mxGraphModel dx="2049" dy="987" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-2" value="SkillsBasedSearchFragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="290" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-3" value="Користувач" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="110" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-4" value="SkillsbasedSearchViewModel" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="475" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="180" y="200" width="10" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="830" as="sourcePoint" />
+            <mxPoint x="320" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="365" y="230" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-8" value="1: Введеня навичок" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-7">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="190" y="230" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-9" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="lkjpCLRc-B5Etj_P5HLt-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-19" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="365" y="290.21000000000004" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-20" value="2: Натискання кнопки пошуку" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-19">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="190" y="290.21000000000004" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-21" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="554.86" y="830" as="sourcePoint" />
+            <mxPoint x="554.86" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-22" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="550" y="320.41" width="10" height="349.59" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-23" value="2.1: Передача даних користувача" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-22">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="375" y="320.41" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-24" value="VacanciesApi" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-25" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="830" as="sourcePoint" />
+            <mxPoint x="740" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-26" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="735" y="350.11" width="10" height="269.89" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-27" value="2.1.1: Створення запиту &lt;br&gt;до серверу&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-26">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="560" y="350.11" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-28" value="Spring-сервер" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-29" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="924.58" y="830" as="sourcePoint" />
+            <mxPoint x="924.58" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-30" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="920" y="379.98" width="10" height="240.02" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-31" value="2.1.1.1: Надсилання запиту&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;до серверу&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-30">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="745" y="379.98" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-32" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="619.6800000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="835" y="619.6800000000001" />
+            </Array>
+            <mxPoint x="920" y="619.6800000000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-33" value="2.1.1.2:&amp;nbsp;Повернення списку &lt;br&gt;вакансій" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="750" y="585" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-36" value="VacanciesListFragment" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-37" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lkjpCLRc-B5Etj_P5HLt-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1309.5" y="830" as="sourcePoint" />
+            <mxPoint x="1309.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-38" value="2.1.3: Сповіщення про &lt;br&gt;наявність вакансій&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-40" source="lkjpCLRc-B5Etj_P5HLt-22">
+          <mxGeometry x="-0.7584" relative="1" as="geometry">
+            <mxPoint x="560" y="630" as="sourcePoint" />
+            <mxPoint x="1" as="offset" />
+            <mxPoint x="1060" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="670" />
+              <mxPoint x="600" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-39" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1310" y="830" as="sourcePoint" />
+            <mxPoint x="1309.5" y="279.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-40" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1305" y="670" width="10" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-41" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1310" y="706.03" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-42" value="5.1.3.1: Оновлення інтерфейсу" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-41">
+          <mxGeometry x="0.0345" relative="1" as="geometry">
+            <mxPoint x="1315" y="686.03" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1345" y="716.03" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-43" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="779.0000000000002" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1220" y="779" />
+            </Array>
+            <mxPoint x="1305" y="779" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-44" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="925" y="408.12" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-45" value="2.1.1.1.1: Обробка даних" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-44">
+          <mxGeometry x="0.0345" relative="1" as="geometry">
+            <mxPoint x="930" y="388.12" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="960" y="418.12" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-46" value="2.1.4: Відображення списку &lt;br&gt;вакансій&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="555" y="740" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-47" value="Модель обробки &lt;br&gt;природної мови" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-48" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1119.5" y="830" as="sourcePoint" />
+            <mxPoint x="1119.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-49" value="2.1.1.1.2: Передача навичок &lt;br&gt;до моделі" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0288" relative="1" as="geometry">
+            <mxPoint x="930" y="479.39" as="sourcePoint" />
+            <mxPoint as="offset" />
+            <mxPoint x="1120" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-50" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="10" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-51" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1125" y="494" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-52" value="2.1.1.1.2.1: Обробка даних" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-51">
+          <mxGeometry x="0.0345" relative="1" as="geometry">
+            <mxPoint x="1130" y="488.14" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1160" y="488" />
+              <mxPoint x="1160" y="510" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-54" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="550" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint x="1120" y="550.09" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-55" value="2.1.1.1.3:&amp;nbsp;Повернення категорій" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="925" y="515" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-60" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="925" y="569.88" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-61" value="2.1.1.1.4:&amp;nbsp;Обробка даних" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1" target="lkjpCLRc-B5Etj_P5HLt-60">
+          <mxGeometry x="0.0345" relative="1" as="geometry">
+            <mxPoint x="930" y="564.02" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="960" y="563.88" />
+              <mxPoint x="960" y="585.88" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-62" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="619.53" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="619.53" />
+            </Array>
+            <mxPoint x="735" y="619.53" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lkjpCLRc-B5Etj_P5HLt-63" value="2.1.2: Повернення списку &lt;br&gt;вакансій" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="579.53" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

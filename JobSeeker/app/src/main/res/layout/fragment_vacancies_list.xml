@@ -14,6 +14,7 @@
             android:id="@+id/search_parameters_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Search parameters"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +27,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Key words"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/key_words_card_view"
             app:layout_constraintEnd_toEndOf="@id/key_words_card_view"
             app:layout_constraintStart_toStartOf="@id/key_words_card_view"
@@ -37,6 +39,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Category"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@id/category_card_view"
             app:layout_constraintStart_toStartOf="@id/category_card_view"
             app:layout_constraintTop_toTopOf="@+id/key_words_label" />
@@ -47,6 +50,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Experience"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@id/experience_card_view"
             app:layout_constraintStart_toStartOf="@id/experience_card_view"
             app:layout_constraintTop_toTopOf="@+id/category_label" />
@@ -57,6 +61,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Location"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@id/location_card_view"
             app:layout_constraintStart_toStartOf="@id/location_card_view"
             app:layout_constraintTop_toTopOf="@+id/experience_label" />
@@ -70,7 +75,8 @@
             app:layout_constraintEnd_toStartOf="@+id/category_card_view"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/key_words_label">
+            app:layout_constraintTop_toBottomOf="@+id/key_words_label"
+            android:visibility="gone">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -98,7 +104,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@+id/experience_card_view"
             app:layout_constraintStart_toEndOf="@+id/key_words_card_view"
-            app:layout_constraintTop_toTopOf="@id/key_words_card_view">
+            app:layout_constraintTop_toTopOf="@id/key_words_card_view"
+            android:visibility="gone">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -125,7 +132,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@+id/location_card_view"
             app:layout_constraintStart_toEndOf="@+id/category_card_view"
-            app:layout_constraintTop_toTopOf="@id/category_card_view">
+            app:layout_constraintTop_toTopOf="@id/category_card_view"
+            android:visibility="gone">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -153,7 +161,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/experience_card_view"
-            app:layout_constraintTop_toTopOf="@id/experience_card_view">
+            app:layout_constraintTop_toTopOf="@id/experience_card_view"
+            android:visibility="gone">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
@@ -173,6 +182,25 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/skills_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_parameters_text_view"
+            app:layout_constraintBottom_toTopOf="@id/vacancy_list">
+
+            <GridLayout
+                android:id="@+id/skills_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="1"
+                android:visibility="gone">
+
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/vacancy_list"
