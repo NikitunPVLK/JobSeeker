@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_vacanciesListFragment_to_detailedVacancyFragment"
             app:destination="@id/detailedVacancyFragment" />
+        <argument
+            android:name="destination"
+            app:argType="com.example.jobseeker.fragments.Destination" />
     </fragment>
     <fragment
         android:id="@+id/skillsBasedSearchFragment"

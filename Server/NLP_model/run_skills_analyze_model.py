@@ -9,9 +9,9 @@ import sys
 args = sys.argv[1:]
 skills = [' '.join(args)]
 
-loaded_model = joblib.load(os.path.abspath("C:\\Users\\nikit\\Diploma\\Server\\NLP_model\\skills_analyze_model.pkl"))
+loaded_model = joblib.load(os.path.abspath("C:\\Users\\nikit\\Diploma\\Server\\NLP_model\\model\\skills_analyze_model.pkl"))
 
-df = pd.read_csv(os.path.abspath("C:\\Users\\nikit\\Diploma\\Server\\NLP_model\\large_dataset_with_labels.csv"), index_col=0)
+df = pd.read_csv(os.path.abspath("C:\\Users\\nikit\\Diploma\\Server\\NLP_model\\dataset\\large_dataset_with_labels.csv"), index_col=0)
 df['label'] = df['label'].apply(lambda x: '[' + '\'' + str(x)[1:-1] + '\'' + ']')
 df['label'] = df['label'].apply(lambda x: ast.literal_eval(x))
 
