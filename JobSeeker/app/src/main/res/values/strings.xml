@@ -88,7 +88,11 @@
         <item>Unity</item>
         <item>Unreal Engine</item>
     </string-array>
+    <string name="experience_spinner_prompt">
+        Select an option
+    </string>
     <string-array name="experience_array">
+        <item>Any</item>
         <item>No experience</item>
         <item>1 year</item>
         <item>3 years</item>

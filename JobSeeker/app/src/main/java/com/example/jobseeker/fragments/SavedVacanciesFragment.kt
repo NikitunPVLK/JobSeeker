@@ -58,8 +58,12 @@ class SavedVacanciesFragment : Fragment() {
         )
         binding.vacancyList.adapter = adapter
         savedVacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
-            vacancies.let {
-                adapter.submitList(it)
+            if (vacancies.isEmpty()) {
+                binding.emptyListTextView.visibility = View.VISIBLE
+            } else {
+                vacancies.let {
+                    adapter.submitList(it)
+                }
             }
         }
 

@@ -72,7 +72,7 @@ class VacancyViewModel : ViewModel() {
 
     private fun getFormattedLocation(): String {
         return when (location) {
-            "Kyiv" -> "KYIV"
+            "Kyiv" -> "Київ"
             "Lviv" -> "LVIV"
             "Dnipro" -> "DNIPRO"
             "Odesa" -> "ODESA"
