@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WorkUaScraper extends AbstractScraper {
-    private Element companyAndLocationBlock;
+    protected Element companyAndLocationBlock;
 
     public WorkUaScraper() {
         baseUrl = "https://www.work.ua";
@@ -19,33 +19,7 @@ public class WorkUaScraper extends AbstractScraper {
     @Override
     protected void buildUrlToScrape() {
         urlWithCriteria = baseUrl + "/ru/jobs";
-//        addLocationToUrl();
-//        addSearchToUrl();
     }
-//
-//    private void addLocationToUrl() {
-//        Location location = criteria.location;
-//        if (location != null) {
-//            urlWithCriteria += switch (location) {
-//                case LVIV -> "-lviv";
-//                case KYIV -> "-kyiv";
-//                case DNIPRO -> "-dnipro";
-//                case ODESA -> "-odesa";
-//                case REMOTE -> "-remote";
-//                case RELOCATION -> "-other";
-//                default -> "";
-//            };
-//        }
-//    }
-//
-//    private void addSearchToUrl() {
-//        String search = criteria.search;
-//        if (search != null) {
-//            if (!search.isEmpty()) {
-//                urlWithCriteria += "-" + search;
-//            }
-//        }
-//    }
 
     @Override
     protected int getPages(Document document) {

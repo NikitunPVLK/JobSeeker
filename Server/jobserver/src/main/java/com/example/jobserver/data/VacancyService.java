@@ -12,16 +12,8 @@ public class VacancyService {
     @Autowired
     private VacancyRepository vacancyRepository;
 
-    public void saveVacancy(Vacancy vacancy) {
-        vacancyRepository.save(vacancy);
-    }
-
     public void saveVacancies(List<Vacancy> vacancies) {
         vacancyRepository.saveAll(vacancies);
-    }
-
-    public List<Vacancy> getAllVacancies() {
-        return vacancyRepository.findAll();
     }
 
     public List<Vacancy> findAllByCriteria(Specification<Vacancy> specification) {

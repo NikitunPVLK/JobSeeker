@@ -16,55 +16,7 @@ public class JobsUaScraper extends AbstractScraper {
     @Override
     protected void buildUrlToScrape() {
         urlWithCriteria = baseUrl;
-//        addLocationToUrl();
-//        addSearchToUrl();
     }
-
-//    private void addLocationToUrl() {
-//        Location location = criteria.location;
-//        if (location != null) {
-//            urlWithCriteria += "/" + switch (location) {
-//                case KYIV -> "kiev";
-//                case LVIV -> "lvov";
-//                case DNIPRO -> "dnepr";
-//                case ODESA -> "odessa";
-//                case VINNYTSYA -> "vinnica";
-//                case KHARKIV -> "kharkov";
-//                case IVANO_FRANKIVSK -> "ivano-frankovsk";
-//                case TERNOPIL -> "ternopol";
-//                case CHERNIVTSI -> "chernovci";
-//                case LUTSK -> "lutsk";
-//                case POLTAVA -> "poltava";
-//                case UZHHOROD -> "uzhgorod";
-//                case RIVNE -> "rovno";
-//                case SUMY -> "sumi";
-//                case ZHYTOMYR -> "zhitomir";
-//                case ZAPORIZHZHIA -> "zaporozhie";
-//                case KHMELNYTSKYI -> "hmelnitsky";
-//                case KREMENCHUK -> "kremenchug";
-//                case MYKOLAIV -> "nikolaev";
-//                case CHERNIHIV -> "chernigov";
-//                case KROPYVNYTSKYI -> "kropivnickiy";
-//                case BILA_CERKVA -> "becek";
-//                case DONETSK -> "donetsk";
-//                case KRYVYI_RIG -> "krivoy_rog";
-//                case LUGANSK -> "lugansk";
-//                case MARIUPOL -> "mariupol";
-//                case KHERSON -> "kherson";
-//                case CHERKASY -> "cherkassy";
-//                default -> "";
-//            };
-//        }
-//    }
-//
-//    private void addSearchToUrl() {
-//        String search = criteria.search;
-//        if (search != null) {
-//            if (!search.isEmpty()) {
-//                urlWithCriteria += "/rabota-" + search.replace("+", "-");
-//            }
-//        }
-//    }
 
     //TODO pages
     @Override

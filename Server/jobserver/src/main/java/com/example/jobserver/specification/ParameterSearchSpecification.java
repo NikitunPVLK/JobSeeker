@@ -1,8 +1,12 @@
 package com.example.jobserver.specification;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ParameterSearchSpecification extends AbstractSearchSpecification {
     private final String keyWords;
@@ -34,7 +38,8 @@ public class ParameterSearchSpecification extends AbstractSearchSpecification {
         }
 
         if (!location.isEmpty()) {
-            predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("location"), location));
+            String searchTerm = "%" + location.toLowerCase() + "%";
+            predicate = criteriaBuilder.and(predicate, criteriaBuilder.like(criteriaBuilder.lower(root.get("location")), searchTerm));
         }
 
         return predicate;
