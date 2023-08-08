@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="831deddb-b858-4543-97a1-875e31712aca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jobseeker/adapter/VacancyItemAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jobseeker/adapter/VacancyItemAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_search_parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_search_parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_vacancies_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vacancies_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/vacancy_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/vacancy_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Server/jobserver/src/main/java/com/example/jobserver/scrapers/WorkUaScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Server/jobserver/src/main/java/com/example/jobserver/scrapers/WorkUaScraper.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2QnpMRSe9BsMWA4z5WRb8x0XB2s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/nikit/Diploma/JobSeeker/app"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="831deddb-b858-4543-97a1-875e31712aca" name="Changes" comment="" />
+      <created>1685999152169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685999152169</updated>
+    </task>
+    <servers />
+  </component>
+</project>

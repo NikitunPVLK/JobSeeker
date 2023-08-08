@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/searchParametersFragment">
+
+    <fragment
+        android:id="@+id/searchParametersFragment"
+        android:name="com.example.jobseeker.fragments.SearchParametersFragment"
+        android:label="Search With Parameters"
+        tools:layout="@layout/fragment_search_parameters" >
+        <action
+            android:id="@+id/action_searchParametersFragment_to_vacanciesListFragment"
+            app:destination="@id/vacanciesListFragment" />
+        <action
+            android:id="@+id/action_searchParametersFragment_to_skillsBasedSearchFragment"
+            app:destination="@id/skillsBasedSearchFragment" />
+        <action
+            android:id="@+id/action_searchParametersFragment_to_savedVacanciesFragment"
+            app:destination="@id/savedVacanciesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vacanciesListFragment"
+        android:name="com.example.jobseeker.fragments.VacanciesListFragment"
+        android:label="Vacancies"
+        tools:layout="@layout/fragment_vacancies_list" >
+        <action
+            android:id="@+id/action_vacanciesListFragment_to_detailedVacancyFragment"
+            app:destination="@id/detailedVacancyFragment" />
+        <argument
+            android:name="destination"
+            app:argType="com.example.jobseeker.fragments.Destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/skillsBasedSearchFragment"
+        android:name="com.example.jobseeker.fragments.SkillsBasedSearchFragment"
+        android:label="Skill Based Search"
+        tools:layout="@layout/fragment_skills_based_search" >
+        <action
+            android:id="@+id/action_skillsBasedSearchFragment_to_vacanciesListFragment"
+            app:destination="@id/vacanciesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedVacanciesFragment"
+        android:name="com.example.jobseeker.fragments.SavedVacanciesFragment"
+        android:label="Saved Vacancies"
+        tools:layout="@layout/fragment_saved_vacancies" >
+        <action
+            android:id="@+id/action_savedVacanciesFragment_to_detailedVacancyFragment"
+            app:destination="@id/detailedVacancyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedVacancyFragment"
+        android:name="com.example.jobseeker.fragments.DetailedVacancyFragment"
+        android:label="Vacancy"
+        tools:layout="@layout/fragment_detailed_vacancy" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="salary"
+            app:argType="string" />
+        <argument
+            android:name="company"
+            app:argType="string" />
+        <argument android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+</navigation>
