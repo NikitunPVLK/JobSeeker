@@ -32,10 +32,10 @@ class VacanciesListFragment : Fragment() {
         )
     }
 
+    private val navigationArgs: VacanciesListFragmentArgs by navArgs()
+
     private var _binding: FragmentVacanciesListBinding? = null
     private val binding get() = _binding!!
-
-    private val navigationArgs: VacanciesListFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +48,12 @@ class VacanciesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = VacancyListAdapter(
+        val adapter = createListAdapter()
+        setupViews(adapter)
+    }
+
+    private fun createListAdapter(): VacancyListAdapter {
+        return VacancyListAdapter(
             {
                 val action =
                     VacanciesListFragmentDirections
@@ -63,85 +68,55 @@ class VacanciesListFragment : Fragment() {
                 findNavController().navigate(action)
             },
             {
-                if (it.isSaved) {
-                    it.isSaved = false
-                    vacancyViewModel.deleteVacancy(it)
-                } else {
-                    it.isSaved = true
-                    val result = vacancyViewModel.addVacancyAsync(it)
-                    lifecycleScope.launch {
-                        if (!result.await()) {
-                            Toast.makeText(
-                                requireContext(),
-                                "This vacancy already saved",
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
-                    }
-                }
+                vacancyViewModel.saveVacancy(it)
             }
         )
-        setupViews(adapter)
-
-        setupTextViews()
     }
 
     private fun setupViews(adapter: VacancyListAdapter) {
         binding.vacancyList.adapter = adapter
 
-        if (navigationArgs.destination == Destination.PARAMETERS_SEARCH) {
-            with(binding) {
-                keyWordsLabel.visibility = View.VISIBLE
-                keyWordsTextView.text = searchViewModel.keyWords
-                keyWordsCardView.visibility = View.VISIBLE
+        when (navigationArgs.destination) {
+            Destination.PARAMETERS_SEARCH -> setupParametersViews()
+            Destination.SKILLS_SEARCH -> setupSkillsViews()
+        }
 
-                categoryLabel.visibility = View.VISIBLE
-                categoryCardView.visibility = View.VISIBLE
-                categoryTextView.text = searchViewModel.category
-
-                experienceLabel.visibility = View.VISIBLE
-                experienceTextView.text = searchViewModel.experience
-                experienceCardView.visibility = View.VISIBLE
-
-                locationTextView.text = searchViewModel.location
-                locationLabel.visibility = View.VISIBLE
-                locationCardView.visibility = View.VISIBLE
-            }
-
-            searchViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
-                vacancies.let {
-                    adapter.submitList(it)
-                }
-            }
-
-        } else if (navigationArgs.destination == Destination.SKILLS_SEARCH) {
-
-            binding.skillsGrid.visibility = View.VISIBLE
-            for (skill in searchViewModel.skills) {
-                val skillButton = Button(requireContext())
-                skillButton.text = skill
-                val params = GridLayout.LayoutParams()
-                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-                params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-                binding.skillsGrid.addView(skillButton, params)
-            }
-
-            searchViewModel.vacancies.observe(viewLifecycleOwner) {
-                it.let {
-                    adapter.submitList(it)
-                }
-            }
+        searchViewModel.vacancies.observe(viewLifecycleOwner) {
+            adapter.submitList(it)
         }
 
         binding.vacancyList.layoutManager = LinearLayoutManager(context)
     }
 
-    private fun setupTextViews() {
+    private fun setupParametersViews() {
         with(binding) {
+            keyWordsCardView.visibility = View.VISIBLE
+            keyWordsLabel.visibility = View.VISIBLE
             keyWordsTextView.text = searchViewModel.keyWords
+
+            categoryCardView.visibility = View.VISIBLE
+            categoryLabel.visibility = View.VISIBLE
             categoryTextView.text = searchViewModel.category
+
+            experienceCardView.visibility = View.VISIBLE
+            experienceLabel.visibility = View.VISIBLE
             experienceTextView.text = searchViewModel.experience
+
+            locationCardView.visibility = View.VISIBLE
+            locationLabel.visibility = View.VISIBLE
             locationTextView.text = searchViewModel.location
+        }
+    }
+
+    private fun setupSkillsViews() {
+        binding.skillsGrid.visibility = View.VISIBLE
+        for (skill in searchViewModel.skills) {
+            val skillButton = Button(requireContext())
+            skillButton.text = skill
+            val params = GridLayout.LayoutParams()
+            params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
+            params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
+            binding.skillsGrid.addView(skillButton, params)
         }
     }
 
