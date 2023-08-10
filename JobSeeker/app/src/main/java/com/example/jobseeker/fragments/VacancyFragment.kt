@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.example.jobseeker.databinding.FragmentDetailedVacancyBinding
+import com.example.jobseeker.databinding.FragmentVacancyBinding
 
-class DetailedVacancyFragment : Fragment() {
-    private val navigationArgs: DetailedVacancyFragmentArgs by navArgs()
+class VacancyFragment : Fragment() {
+    private val navigationArgs: VacancyFragmentArgs by navArgs()
 
-    private var _binding: FragmentDetailedVacancyBinding? = null
+    private var _binding: FragmentVacancyBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,7 +20,7 @@ class DetailedVacancyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDetailedVacancyBinding.inflate(inflater, container, false)
+        _binding = FragmentVacancyBinding.inflate(inflater, container, false)
         return binding.root
     }
 

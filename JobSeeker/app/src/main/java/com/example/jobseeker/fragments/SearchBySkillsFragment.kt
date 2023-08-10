@@ -10,19 +10,19 @@ import android.widget.GridLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.jobseeker.databinding.FragmentSkillsBasedSearchBinding
+import com.example.jobseeker.databinding.FragmentSearchBySkillsBinding
 import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.ViewModelFactory
 
-class SkillsBasedSearchFragment : Fragment() {
+class SearchBySkillsFragment : Fragment() {
 
     private val skills = mutableListOf<String>()
 
     private val searchViewModel: SearchViewModel by activityViewModels {
-        VacancyViewModelFactory()
+        ViewModelFactory()
     }
 
-    private var _binding: FragmentSkillsBasedSearchBinding? = null
+    private var _binding: FragmentSearchBySkillsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class SkillsBasedSearchFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSkillsBasedSearchBinding.inflate(inflater, container, false)
+        _binding = FragmentSearchBySkillsBinding.inflate(inflater, container, false)
         binding.searchButton.setOnClickListener {
             submitSearchParameters()
         }
@@ -57,7 +57,7 @@ class SkillsBasedSearchFragment : Fragment() {
         if (skill.isNotEmpty()) {
             skills.add(skill)
 
-            val skillButton = Button(this@SkillsBasedSearchFragment.requireContext())
+            val skillButton = Button(this@SearchBySkillsFragment.requireContext())
             skillButton.text = skill
             skillButton.setOnClickListener {
                 val clickedSkillButton = (it as Button)
@@ -78,7 +78,7 @@ class SkillsBasedSearchFragment : Fragment() {
     private fun submitSearchParameters() {
         searchViewModel.searchVacanciesBySkills(skills)
         val action =
-            SkillsBasedSearchFragmentDirections
+            SearchBySkillsFragmentDirections
                 .actionSkillsBasedSearchFragmentToVacanciesListFragment(
                     Destination.SKILLS_SEARCH
                 )

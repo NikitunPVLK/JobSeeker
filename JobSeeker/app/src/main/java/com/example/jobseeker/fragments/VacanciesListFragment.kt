@@ -16,18 +16,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jobseeker.application.JobSeekerApplication
 import com.example.jobseeker.adapter.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentVacanciesListBinding
-import com.example.jobseeker.viewmodel.SavedVacancyViewModel
+import com.example.jobseeker.viewmodel.VacancyViewModel
 import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.ViewModelFactory
 import kotlinx.coroutines.launch
 
 class VacanciesListFragment : Fragment() {
     private val searchViewModel: SearchViewModel by activityViewModels {
-        VacancyViewModelFactory()
+        ViewModelFactory()
     }
 
-    private val savedVacancyViewModel: SavedVacancyViewModel by activityViewModels {
-        VacancyViewModelFactory(
+    private val vacancyViewModel: VacancyViewModel by activityViewModels {
+        ViewModelFactory(
             (activity?.application as JobSeekerApplication).database.vacancyDao()
         )
     }
@@ -65,10 +65,10 @@ class VacanciesListFragment : Fragment() {
             {
                 if (it.isSaved) {
                     it.isSaved = false
-                    savedVacancyViewModel.deleteVacancy(it)
+                    vacancyViewModel.deleteVacancy(it)
                 } else {
                     it.isSaved = true
-                    val result = savedVacancyViewModel.addVacancyAsync(it)
+                    val result = vacancyViewModel.addVacancyAsync(it)
                     lifecycleScope.launch {
                         if (!result.await()) {
                             Toast.makeText(
@@ -118,7 +118,7 @@ class VacanciesListFragment : Fragment() {
 
             binding.skillsGrid.visibility = View.VISIBLE
             for (skill in searchViewModel.skills) {
-                val skillButton = Button(this@VacanciesListFragment.requireContext())
+                val skillButton = Button(requireContext())
                 skillButton.text = skill
                 val params = GridLayout.LayoutParams()
                 params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)

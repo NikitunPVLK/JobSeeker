@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jobseeker.application.JobSeekerApplication
 import com.example.jobseeker.adapter.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.viewmodel.SavedVacancyViewModel
-import com.example.jobseeker.viewmodel.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.VacancyViewModel
+import com.example.jobseeker.viewmodel.ViewModelFactory
 
 class SavedVacanciesFragment : Fragment() {
     private var _binding: FragmentSavedVacanciesBinding? = null
     private val binding get() = _binding!!
 
-    private val savedVacancyViewModel: SavedVacancyViewModel by activityViewModels {
-        VacancyViewModelFactory(
+    private val vacancyViewModel: VacancyViewModel by activityViewModels {
+        ViewModelFactory(
             (activity?.application as JobSeekerApplication).database.vacancyDao()
         )
     }
@@ -52,12 +52,12 @@ class SavedVacanciesFragment : Fragment() {
             {
                 if(it.isSaved) {
                     it.isSaved = false
-                    savedVacancyViewModel.deleteVacancy(it)
+                    vacancyViewModel.deleteVacancy(it)
                 }
             }
         )
         binding.vacancyList.adapter = adapter
-        savedVacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
+        vacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
             if (vacancies.isEmpty()) {
                 binding.emptyListTextView.visibility = View.VISIBLE
             } else {

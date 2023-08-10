@@ -7,13 +7,13 @@
 
         <variable
             name="searchParametersFragment"
-            type="com.example.jobseeker.fragments.SearchParametersFragment" />
+            type="com.example.jobseeker.fragments.SearchByParametersFragment" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.SearchParametersFragment">
+        tools:context=".fragments.SearchByParametersFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

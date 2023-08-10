@@ -8,7 +8,7 @@ import com.example.jobseeker.model.Vacancy
 import kotlinx.coroutines.*
 
 
-class SavedVacancyViewModel(private val vacancyDao: VacancyDao) : ViewModel() {
+class VacancyViewModel(private val vacancyDao: VacancyDao) : ViewModel() {
 
     val vacancies: LiveData<List<Vacancy>> = vacancyDao.getVacancies()
 

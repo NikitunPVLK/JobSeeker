@@ -9,17 +9,17 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
-import com.example.jobseeker.databinding.FragmentSearchParametersBinding
+import com.example.jobseeker.databinding.FragmentSearchByParametersBinding
 import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.VacancyViewModelFactory
+import com.example.jobseeker.viewmodel.ViewModelFactory
 
-class SearchParametersFragment : Fragment() {
+class SearchByParametersFragment : Fragment() {
 
     private val searchViewModel: SearchViewModel by activityViewModels {
-        VacancyViewModelFactory()
+        ViewModelFactory()
     }
 
-    private var _binding: FragmentSearchParametersBinding? = null
+    private var _binding: FragmentSearchByParametersBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -27,7 +27,7 @@ class SearchParametersFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSearchParametersBinding.inflate(inflater, container, false)
+        _binding = FragmentSearchByParametersBinding.inflate(inflater, container, false)
         setupCategoryAutoComplete()
         setupExperienceSpinner()
         setupLocationAutoComplete()
@@ -77,7 +77,7 @@ class SearchParametersFragment : Fragment() {
             binding.locationInput.text.toString()
         )
         val action =
-            SearchParametersFragmentDirections
+            SearchByParametersFragmentDirections
                 .actionSearchParametersFragmentToVacanciesListFragment(
                     Destination.PARAMETERS_SEARCH
                 )

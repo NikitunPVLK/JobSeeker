@@ -6,6 +6,6 @@ class SearchViewModelFactoryTest {
 
     @Test
     fun create() {
-        VacancyViewModelFactory().create(SearchViewModel().javaClass)
+        ViewModelFactory().create(SearchViewModel().javaClass)
     }
 }

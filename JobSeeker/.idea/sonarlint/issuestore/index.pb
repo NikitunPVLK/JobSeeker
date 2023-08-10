@@ -1,8 +1,4 @@
 
-{
-Kapp/src/main/java/com/example/jobseeker/application/JobSeekerApplication.kt,6\c\6ce836382201bcd4d9b7dcdedc07befb1c9607da
-p
-@app/src/main/java/com/example/jobseeker/fragments/Destination.kt,0\d\0d762b3e66175cda5b06f481a125aa7ea5ae62fc
 w
 Gapp/src/test/java/com/example/jobseeker/data/VacancyRoomDatabaseTest.kt,c\9\c93df7120bcffe70d036716ab5e0cf30d04acd80
 h
