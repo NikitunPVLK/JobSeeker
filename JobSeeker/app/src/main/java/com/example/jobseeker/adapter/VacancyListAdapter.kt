@@ -21,7 +21,8 @@ class VacancyListAdapter(
         return VacancyViewHolder(
             VacancyListItemBinding.inflate(
                 LayoutInflater.from(parent.context)
-            ), onSaveButtonClicked
+            ),
+            onSaveButtonClicked
         )
     }
 

@@ -1,0 +1,8 @@
+
+;kotlin:S6310"Avoid hardcoded dispatchers.(¶ÃÝ›8‚¶Ü„ž1
+@kotlin:S6310"Avoid hardcoded dispatchers.(¡šŠÅþÿÿÿÿ8ƒ¶Ü„ž1
+ckotlin:S6315."?This function returns "Deferred", but its result is never used.(ñ£‚¥üÿÿÿÿ8óÎï„ž1
+9kotlin:S1128"Remove this unused import.(üƒŠ¸8®áñ„ž1
+9kotlin:S1128"Remove this unused import.(´Ùí8ÞÞ„ž1
+>kotlin:S1128"Remove this unused import.(ÙÃä¡þÿÿÿÿ8„¶Ü„ž1
+`kotlin:S6510"AMove "return" statements from all branches before "if" statement.(É…¿•8Ä â„ž1

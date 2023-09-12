@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/searchParametersFragment"
-        android:name="com.example.jobseeker.fragments.SearchParametersFragment"
+        android:name="com.example.jobseeker.fragments.SearchByParametersFragment"
         android:label="Search With Parameters"
-        tools:layout="@layout/fragment_search_parameters" >
+        tools:layout="@layout/fragment_search_by_parameters" >
         <action
             android:id="@+id/action_searchParametersFragment_to_vacanciesListFragment"
             app:destination="@id/vacanciesListFragment" />
@@ -34,9 +34,9 @@
     </fragment>
     <fragment
         android:id="@+id/skillsBasedSearchFragment"
-        android:name="com.example.jobseeker.fragments.SkillsBasedSearchFragment"
+        android:name="com.example.jobseeker.fragments.SearchBySkillsFragment"
         android:label="Skill Based Search"
-        tools:layout="@layout/fragment_skills_based_search" >
+        tools:layout="@layout/fragment_search_by_skills" >
         <action
             android:id="@+id/action_skillsBasedSearchFragment_to_vacanciesListFragment"
             app:destination="@id/vacanciesListFragment" />
@@ -52,9 +52,9 @@
     </fragment>
     <fragment
         android:id="@+id/detailedVacancyFragment"
-        android:name="com.example.jobseeker.fragments.DetailedVacancyFragment"
+        android:name="com.example.jobseeker.fragments.VacancyFragment"
         android:label="Vacancy"
-        tools:layout="@layout/fragment_detailed_vacancy" >
+        tools:layout="@layout/fragment_vacancy" >
         <argument
             android:name="title"
             app:argType="string" />

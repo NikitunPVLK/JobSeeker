@@ -21,8 +21,6 @@ class SearchViewModel : ViewModel() {
     private var _location: String = ""
     val location: String get() = _location
 
-    private lateinit var parametersHandler: ParametersHandler
-
     private lateinit var _skills: List<String>
     val skills get() = _skills
 
@@ -42,7 +40,7 @@ class SearchViewModel : ViewModel() {
         _location = location
         viewModelScope.launch {
             try {
-                parametersHandler = ParametersHandler()
+                val parametersHandler = ParametersHandler()
                 _vacancies.value = VacanciesApi.retrofitService.getVacanciesByParameters(
                     keyWords,
                     category,
