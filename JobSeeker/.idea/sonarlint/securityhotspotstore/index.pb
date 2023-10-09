@@ -9,8 +9,6 @@ u
 Eapp/src/main/java/com/example/jobseeker/viewmodel/ViewModelFactory.kt,7\6\76093cfb0f6f78ef669d6acf296592839b459d85
 v
 Fapp/src/main/java/com/example/jobseeker/viewmodel/ParametersHandler.kt,8\a\8a7bd9ffc21a132e1d3f13880763d5bc7f8941ac
-{
-Kapp/src/main/java/com/example/jobseeker/fragments/SearchBySkillsFragment.kt,6\e\6ef6b5720847bc8abdfcad46fe47d11db832bd65
 h
 8app/src/main/java/com/example/jobseeker/model/Vacancy.kt,3\f\3f8eaa2e23ae0ab8248c9743f8212c2c6bacb683
 ?
@@ -41,5 +39,3 @@ s
 Capp/src/main/java/com/example/jobseeker/application/MainActivity.kt,0\b\0b063c4033dbf88a2a222adb7c7043213dbfe400
 {
 Kapp/src/main/java/com/example/jobseeker/application/JobSeekerApplication.kt,6\c\6ce836382201bcd4d9b7dcdedc07befb1c9607da
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
