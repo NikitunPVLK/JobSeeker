@@ -9,8 +9,6 @@ u
 Eapp/src/main/java/com/example/jobseeker/viewmodel/ViewModelFactory.kt,7\6\76093cfb0f6f78ef669d6acf296592839b459d85
 v
 Fapp/src/main/java/com/example/jobseeker/viewmodel/ParametersHandler.kt,8\a\8a7bd9ffc21a132e1d3f13880763d5bc7f8941ac
-h
-8app/src/main/java/com/example/jobseeker/model/Vacancy.kt,3\f\3f8eaa2e23ae0ab8248c9743f8212c2c6bacb683
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 A

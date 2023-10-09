@@ -1,4 +1,4 @@
-package com.example.jobseeker.fragments
+package com.example.jobseeker.ui.fragments
 
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
@@ -16,8 +16,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchByParametersBinding
-import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.SearchViewModel
+import com.example.jobseeker.ui.viewmodels.ViewModelFactory
 import kotlin.math.hypot
 
 class SearchByParametersFragment : Fragment() {

@@ -1,17 +1,14 @@
-package com.example.jobseeker.adapter
+package com.example.jobseeker.ui.adapters
 
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.jobseeker.R
 import com.example.jobseeker.databinding.VacancyListItemBinding
-import com.example.jobseeker.model.Vacancy
+import com.example.jobseeker.domain.Vacancy
 
 class VacancyListAdapter(
     private val onItemClicked: (Vacancy) -> Unit, private val onSaveButtonClicked: (Vacancy) -> Unit

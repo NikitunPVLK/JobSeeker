@@ -1,6 +1,6 @@
-package com.example.jobseeker.network
+package com.example.jobseeker.data.network
 
-import com.example.jobseeker.model.Vacancy
+import com.example.jobseeker.domain.Vacancy
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

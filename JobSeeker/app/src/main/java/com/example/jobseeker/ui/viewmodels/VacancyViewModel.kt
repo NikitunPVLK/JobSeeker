@@ -1,13 +1,10 @@
-package com.example.jobseeker.viewmodel
+package com.example.jobseeker.ui.viewmodels
 
-import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
-import com.example.jobseeker.data.VacancyDao
-import com.example.jobseeker.model.Vacancy
+import com.example.jobseeker.data.database.VacancyDao
+import com.example.jobseeker.domain.Vacancy
 import kotlinx.coroutines.*
 
 

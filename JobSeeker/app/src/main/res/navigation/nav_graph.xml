@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/searchParametersFragment"
-        android:name="com.example.jobseeker.fragments.SearchByParametersFragment"
+        android:name="com.example.jobseeker.ui.fragments.SearchByParametersFragment"
         android:label="Search With Parameters"
         tools:layout="@layout/fragment_search_by_parameters" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/vacanciesListFragment"
-        android:name="com.example.jobseeker.fragments.VacanciesListFragment"
+        android:name="com.example.jobseeker.ui.fragments.VacanciesListFragment"
         android:label="Vacancies"
         tools:layout="@layout/fragment_vacancies_list" >
         <action
@@ -30,11 +30,11 @@
             app:destination="@id/detailedVacancyFragment" />
         <argument
             android:name="destination"
-            app:argType="com.example.jobseeker.fragments.Destination" />
+            app:argType="com.example.jobseeker.ui.fragments.Destination" />
     </fragment>
     <fragment
         android:id="@+id/skillsBasedSearchFragment"
-        android:name="com.example.jobseeker.fragments.SearchBySkillsFragment"
+        android:name="com.example.jobseeker.ui.fragments.SearchBySkillsFragment"
         android:label="Skill Based Search"
         tools:layout="@layout/fragment_search_by_skills" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/savedVacanciesFragment"
-        android:name="com.example.jobseeker.fragments.SavedVacanciesFragment"
+        android:name="com.example.jobseeker.ui.fragments.SavedVacanciesFragment"
         android:label="Saved Vacancies"
         tools:layout="@layout/fragment_saved_vacancies" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailedVacancyFragment"
-        android:name="com.example.jobseeker.fragments.VacancyFragment"
+        android:name="com.example.jobseeker.ui.fragments.VacancyFragment"
         android:label="Vacancy"
         tools:layout="@layout/fragment_vacancy" >
         <argument

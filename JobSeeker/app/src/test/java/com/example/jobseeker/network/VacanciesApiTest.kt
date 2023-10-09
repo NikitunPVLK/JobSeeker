@@ -1,6 +1,6 @@
 package com.example.jobseeker.network
 
-import org.junit.Assert.*
+import com.example.jobseeker.data.network.VacanciesApi
 
 import org.junit.Test
 

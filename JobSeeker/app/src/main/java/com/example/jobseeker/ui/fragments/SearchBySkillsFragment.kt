@@ -1,27 +1,24 @@
-package com.example.jobseeker.fragments
+package com.example.jobseeker.ui.fragments
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
 import androidx.core.animation.doOnEnd
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchBySkillsBinding
-import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.SearchViewModel
+import com.example.jobseeker.ui.viewmodels.ViewModelFactory
 import com.google.android.material.button.MaterialButton
-import kotlin.math.hypot
 
 class SearchBySkillsFragment : Fragment() {
 

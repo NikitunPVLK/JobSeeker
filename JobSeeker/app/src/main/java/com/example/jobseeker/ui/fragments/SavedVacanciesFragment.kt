@@ -1,4 +1,4 @@
-package com.example.jobseeker.fragments
+package com.example.jobseeker.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jobseeker.application.JobSeekerApplication
-import com.example.jobseeker.adapter.VacancyListAdapter
+import com.example.jobseeker.ui.application.JobSeekerApplication
+import com.example.jobseeker.ui.adapters.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.viewmodel.VacancyViewModel
-import com.example.jobseeker.viewmodel.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.VacancyViewModel
+import com.example.jobseeker.ui.viewmodels.ViewModelFactory
 
 class SavedVacanciesFragment : Fragment() {
     private var _binding: FragmentSavedVacanciesBinding? = null
