@@ -1,4 +1,4 @@
-package com.example.jobseeker.application
+package com.example.jobseeker.ui.activities
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity

@@ -1,12 +1,12 @@
-package com.example.jobseeker.viewmodel
+package com.example.jobseeker.ui.viewmodels
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jobseeker.model.Vacancy
-import com.example.jobseeker.network.VacanciesApi
+import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.data.network.VacanciesApi
 import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel() {

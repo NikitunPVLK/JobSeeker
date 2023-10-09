@@ -1,4 +1,4 @@
-package com.example.jobseeker.model
+package com.example.jobseeker.domain
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

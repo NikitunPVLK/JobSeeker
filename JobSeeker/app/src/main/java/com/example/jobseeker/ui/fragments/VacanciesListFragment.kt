@@ -1,4 +1,4 @@
-package com.example.jobseeker.fragments
+package com.example.jobseeker.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,20 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jobseeker.application.JobSeekerApplication
-import com.example.jobseeker.adapter.VacancyListAdapter
+import com.example.jobseeker.ui.application.JobSeekerApplication
+import com.example.jobseeker.ui.adapters.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentVacanciesListBinding
-import com.example.jobseeker.viewmodel.VacancyViewModel
-import com.example.jobseeker.viewmodel.SearchViewModel
-import com.example.jobseeker.viewmodel.ViewModelFactory
-import kotlinx.coroutines.launch
+import com.example.jobseeker.ui.viewmodels.VacancyViewModel
+import com.example.jobseeker.ui.viewmodels.SearchViewModel
+import com.example.jobseeker.ui.viewmodels.ViewModelFactory
 
 class VacanciesListFragment : Fragment() {
     private val searchViewModel: SearchViewModel by activityViewModels {

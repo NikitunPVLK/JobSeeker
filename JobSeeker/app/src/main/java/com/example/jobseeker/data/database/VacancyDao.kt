@@ -1,9 +1,8 @@
-package com.example.jobseeker.data
+package com.example.jobseeker.data.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.jobseeker.model.Vacancy
-import kotlinx.coroutines.flow.Flow
+import com.example.jobseeker.domain.Vacancy
 
 @Dao
 interface VacancyDao {

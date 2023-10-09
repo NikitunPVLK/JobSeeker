@@ -1,4 +1,4 @@
-package com.example.jobseeker.fragments
+package com.example.jobseeker.ui.fragments
 
 import android.os.Bundle
 import android.text.Html

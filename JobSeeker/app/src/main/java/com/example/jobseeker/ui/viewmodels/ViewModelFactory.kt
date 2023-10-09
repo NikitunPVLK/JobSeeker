@@ -1,8 +1,8 @@
-package com.example.jobseeker.viewmodel
+package com.example.jobseeker.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.jobseeker.data.VacancyDao
+import com.example.jobseeker.data.database.VacancyDao
 
 class ViewModelFactory(private var vacancyDao: VacancyDao? = null) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

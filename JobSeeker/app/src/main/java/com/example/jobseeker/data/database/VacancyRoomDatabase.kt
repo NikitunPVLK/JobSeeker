@@ -1,10 +1,10 @@
-package com.example.jobseeker.data
+package com.example.jobseeker.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.jobseeker.model.Vacancy
+import com.example.jobseeker.domain.Vacancy
 
 @Database(entities = [Vacancy::class], version = 2, exportSchema = false)
 abstract class VacancyRoomDatabase : RoomDatabase() {
