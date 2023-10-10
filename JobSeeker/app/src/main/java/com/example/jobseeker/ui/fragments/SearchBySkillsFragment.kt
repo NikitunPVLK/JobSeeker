@@ -64,14 +64,23 @@ class SearchBySkillsFragment : Fragment() {
             val skillButton = createSkillButton(skill)
 
             val params = GridLayout.LayoutParams()
-            params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-            params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-            params.marginEnd = 20
+            val columnWeight = 1f
+            val rowWeight = 1f
+            params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, columnWeight)
+            params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, rowWeight)
+            params.marginEnd = resources
+                .getDimension(R.dimen.search_by_skills_grid_margin_end)
+                .toInt()
             binding.grid.addView(skillButton, params)
-            if (skills.size % 3 == 1) {
-                runButtonAnimation(135f)
+            if (skills.size % resources.getInteger(R.integer.search_by_skills_max_row_size) == 1) {
+                runSearchButtonAnimation(
+                    resources.getDimension(R.dimen.search_by_skills_find_button_offset_down)
+                )
             }
-            ObjectAnimator.ofFloat(skillButton, "alpha", 1.0f).setDuration(300).start()
+            ObjectAnimator
+                .ofFloat(skillButton, "alpha", 1.0f)
+                .setDuration(resources.getInteger(R.integer.skill_animation_duration).toLong())
+                .start()
 
             binding.skillsInput.text.clear()
 
@@ -111,12 +120,12 @@ class SearchBySkillsFragment : Fragment() {
         skillButton.setOnClickListener {
             val clickedSkillButton = (it as Button)
             ObjectAnimator.ofFloat(skillButton, "alpha", 0.0f).apply {
-                duration = 150
+                duration = resources.getInteger(R.integer.skill_animation_duration).toLong()
                 doOnEnd {
                     skills.remove(clickedSkillButton.text)
                     binding.grid.removeView(clickedSkillButton)
-                    if (skills.size % 3 == 0) {
-                        runButtonAnimation(-135f)
+                    if (skills.size % resources.getInteger(R.integer.search_by_skills_max_row_size) == 0) {
+                        runSearchButtonAnimation(resources.getDimension(R.dimen.search_by_skills_find_button_offset_up))
                     }
                 }
                 start()
@@ -126,11 +135,13 @@ class SearchBySkillsFragment : Fragment() {
         return skillButton
     }
 
-    private fun runButtonAnimation(offset: Float) {
+    private fun runSearchButtonAnimation(offset: Float) {
         val buttonPosition = binding.searchButton.translationY
         ObjectAnimator.ofFloat(binding.searchButton, "translationY", buttonPosition + offset)
             .apply {
-                duration = 200
+                duration = resources
+                    .getInteger(R.integer.search_by_skills_find_button_animation_duration)
+                    .toLong()
                 interpolator = FastOutSlowInInterpolator()
                 start()
             }

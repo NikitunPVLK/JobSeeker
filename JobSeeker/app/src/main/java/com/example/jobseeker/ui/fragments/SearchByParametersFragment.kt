@@ -107,23 +107,26 @@ class SearchByParametersFragment : Fragment() {
             0f,
             hypot(extendedSearchCardView.width.toFloat(), extendedSearchCardView.height.toFloat())
         )
-            .setDuration(400)
+            .setDuration(
+                resources.getInteger(R.integer.reveal_extended_search_animation_duration).toLong()
+            )
             .start()
     }
 
     private fun hideExtendedSearch() {
         val extendedSearchCardView = binding.extendedSearchCardView
-        val animator = ViewAnimationUtils.createCircularReveal(extendedSearchCardView,
+        ViewAnimationUtils.createCircularReveal(extendedSearchCardView,
             extendedSearchCardView.width / 2,
             0,
             hypot(extendedSearchCardView.width.toFloat(), extendedSearchCardView.height.toFloat()),
             0f
-        )
-        animator.duration = 400
-        animator.doOnEnd {
-            extendedSearchCardView.isVisible = false
+        ).apply {
+            duration = resources
+                .getInteger(R.integer.hide_extended_search_animation_duration)
+                .toLong()
+            doOnEnd { extendedSearchCardView.isVisible = false }
+            start()
         }
-        animator.start()
     }
 
     private fun getAnimatedVectorDrawable(@DrawableRes id: Int): AnimatedVectorDrawable {

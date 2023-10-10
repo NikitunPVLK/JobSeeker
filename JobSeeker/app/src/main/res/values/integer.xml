@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="search_by_skills_max_row_size">3</integer>
+    <integer name="skill_animation_duration">150</integer>
+    <integer name="search_by_skills_find_button_animation_duration">200</integer>
+    <integer name="reveal_extended_search_animation_duration">400</integer>
+    <integer name="hide_extended_search_animation_duration">400</integer>
+</resources>

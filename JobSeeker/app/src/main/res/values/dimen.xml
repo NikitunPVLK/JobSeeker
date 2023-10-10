@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="search_by_parameters_element_margin">15dp</dimen>
+    <dimen name="search_by_skills_grid_margin_end">20</dimen>
+    <dimen name="search_by_skills_find_button_offset_down">135</dimen>
+    <dimen name="search_by_skills_find_button_offset_up">-135</dimen>
 </resources>
