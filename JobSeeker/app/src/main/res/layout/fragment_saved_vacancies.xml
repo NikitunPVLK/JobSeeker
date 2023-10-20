@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
-        android:text="There are no saved vacancies"
-        android:textSize="20sp"
+        android:text="@string/empty_saved_vacancies_text_view_text"
+        android:textSize="@dimen/empty_saved_vacancies_text_view_text_size"
         />
 
 </FrameLayout>

@@ -69,12 +69,12 @@ class SearchBySkillsFragment : Fragment() {
             params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, columnWeight)
             params.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, rowWeight)
             params.marginEnd = resources
-                .getDimension(R.dimen.search_by_skills_grid_margin_end)
+                .getDimension(R.dimen.skills_grid_margin_end)
                 .toInt()
             binding.grid.addView(skillButton, params)
             if (skills.size % resources.getInteger(R.integer.search_by_skills_max_row_size) == 1) {
                 runSearchButtonAnimation(
-                    resources.getDimension(R.dimen.search_by_skills_find_button_offset_down)
+                    resources.getDimension(R.dimen.search_by_skills_search_button_offset_down)
                 )
             }
             ObjectAnimator
@@ -125,7 +125,7 @@ class SearchBySkillsFragment : Fragment() {
                     skills.remove(clickedSkillButton.text)
                     binding.grid.removeView(clickedSkillButton)
                     if (skills.size % resources.getInteger(R.integer.search_by_skills_max_row_size) == 0) {
-                        runSearchButtonAnimation(resources.getDimension(R.dimen.search_by_skills_find_button_offset_up))
+                        runSearchButtonAnimation(resources.getDimension(R.dimen.search_by_skills_search_button_offset_up))
                     }
                 }
                 start()
