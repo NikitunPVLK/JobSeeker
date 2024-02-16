@@ -5,21 +5,19 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.jobseeker.data.network.Result
+import com.example.jobseeker.domain.SearchParameters
 import com.example.jobseeker.domain.Vacancy
-import com.example.jobseeker.data.network.VacanciesApi
+import com.example.jobseeker.domain.usecase.FetchVacanciesByParametersUseCase
+import com.example.jobseeker.domain.usecase.FetchVacanciesBySkillsUseCase
 import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel() {
-    private val TAG = "SearchViewModel"
+    private val tag = "SearchViewModel"
 
-    private var _keyWords: String = ""
-    val keyWords: String get() = _keyWords
-    private var _category: String = ""
-    val category: String get() = _category
-    private var _experience: String = ""
-    val experience: String get() = _experience
-    private var _location: String = ""
-    val location: String get() = _location
+    private lateinit var _searchParameters: SearchParameters
+    val searchParameters: SearchParameters
+        get() = _searchParameters
 
     private lateinit var _skills: List<String>
     val skills get() = _skills
@@ -28,38 +26,30 @@ class SearchViewModel : ViewModel() {
     val vacancies: LiveData<List<Vacancy>>
         get() = _vacancies
 
-    fun searchVacanciesByParameters(
-        keyWords: String,
-        category: String,
-        experience: String,
-        location: String
-    ) {
-        _keyWords = keyWords
-        _category = category
-        _experience = experience
-        _location = location
+    fun searchVacanciesByParameters(searchParameters: SearchParameters) {
+
+        val useCase = FetchVacanciesByParametersUseCase()
         viewModelScope.launch {
-            try {
-                val parametersHandler = ParametersHandler()
-                _vacancies.value = VacanciesApi.retrofitService.getVacanciesByParameters(
-                    keyWords,
-                    category,
-                    parametersHandler.getFormattedExperience(experience),
-                    parametersHandler.getFormattedLocation(location)
-                )
-            } catch (e: Exception) {
-                Log.e(TAG, e.message.toString())
+            when (val result = useCase.fetchVacanciesByParameters(searchParameters)) {
+                is Result.Success -> _vacancies.value = result.vacancies
+                is Result.Failure -> {
+                    Log.e(tag, "FetchVacanciesByParametersUseCase failure")
+                    _vacancies.value = listOf()
+                }
             }
         }
     }
 
     fun searchVacanciesBySkills(skills: List<String>) {
         _skills = skills
-        viewModelScope.launch{
-            try {
-                _vacancies.value = VacanciesApi.retrofitService.getVacanciesBySkills(skills)
-            } catch (e: Exception) {
-                Log.e(TAG, e.message.toString())
+        val useCase = FetchVacanciesBySkillsUseCase()
+        viewModelScope.launch {
+            when (val result = useCase.fetchVacanciesBySkills(skills)) {
+                is Result.Success -> _vacancies.value = result.vacancies
+                is Result.Failure -> {
+                    Log.e(tag, "FetchVacanciesBySkillsUseCase failure")
+                    _vacancies.value = listOf()
+                }
             }
         }
     }

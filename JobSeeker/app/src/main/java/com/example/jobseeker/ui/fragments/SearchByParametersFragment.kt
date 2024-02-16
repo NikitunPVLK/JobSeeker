@@ -16,6 +16,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchByParametersBinding
+import com.example.jobseeker.domain.SearchParameters
 import com.example.jobseeker.ui.viewmodels.SearchViewModel
 import com.example.jobseeker.ui.viewmodels.ViewModelFactory
 import kotlin.math.hypot
@@ -76,13 +77,14 @@ class SearchByParametersFragment : Fragment() {
         val locationInput = binding.locationInput
         locationInput.setAdapter(adapter)
     }
+
     private fun setupExtendedSearchButton() {
         with(binding.extendedSearchButton) {
             isSaveEnabled = false
             isCheckable = true
             isToggleCheckedStateOnClick = true
             setOnClickListener {
-                val extendedSearchHideRevealFunc : () -> Unit
+                val extendedSearchHideRevealFunc: () -> Unit
                 val icon: AnimatedVectorDrawable
                 if (isChecked) {
                     icon = getAnimatedVectorDrawable(R.drawable.animated_ic_open_extended_search)
@@ -101,7 +103,8 @@ class SearchByParametersFragment : Fragment() {
     private fun revealExtendedSearch() {
         val extendedSearchCardView = binding.extendedSearchCardView
         extendedSearchCardView.isVisible = true
-        ViewAnimationUtils.createCircularReveal(extendedSearchCardView,
+        ViewAnimationUtils.createCircularReveal(
+            extendedSearchCardView,
             extendedSearchCardView.width / 2,
             0,
             0f,
@@ -115,7 +118,8 @@ class SearchByParametersFragment : Fragment() {
 
     private fun hideExtendedSearch() {
         val extendedSearchCardView = binding.extendedSearchCardView
-        ViewAnimationUtils.createCircularReveal(extendedSearchCardView,
+        ViewAnimationUtils.createCircularReveal(
+            extendedSearchCardView,
             extendedSearchCardView.width / 2,
             0,
             hypot(extendedSearchCardView.width.toFloat(), extendedSearchCardView.height.toFloat()),
@@ -138,12 +142,13 @@ class SearchByParametersFragment : Fragment() {
     }
 
     fun submitSearchParameters() {
-        searchViewModel.searchVacanciesByParameters(
+        val searchParameters = SearchParameters(
             binding.keyWordsInput.text.toString(),
             binding.categoryInput.text.toString(),
             binding.experienceSpinner.selectedItem.toString(),
             binding.locationInput.text.toString()
         )
+        searchViewModel.searchVacanciesByParameters(searchParameters)
         val action =
             SearchByParametersFragmentDirections
                 .actionSearchParametersFragmentToVacanciesListFragment(

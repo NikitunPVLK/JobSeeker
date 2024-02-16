@@ -87,21 +87,23 @@ class VacanciesListFragment : Fragment() {
 
     private fun setupParametersViews() {
         with(binding) {
+            val searchParameters = searchViewModel.searchParameters
+
             keyWordsCardView.visibility = View.VISIBLE
             keyWordsLabel.visibility = View.VISIBLE
-            keyWordsTextView.text = searchViewModel.keyWords
+            keyWordsTextView.text = searchParameters.keyWords
 
             categoryCardView.visibility = View.VISIBLE
             categoryLabel.visibility = View.VISIBLE
-            categoryTextView.text = searchViewModel.category
+            categoryTextView.text = searchParameters.category
 
             experienceCardView.visibility = View.VISIBLE
             experienceLabel.visibility = View.VISIBLE
-            experienceTextView.text = searchViewModel.experience
+            experienceTextView.text = searchParameters.experience
 
             locationCardView.visibility = View.VISIBLE
             locationLabel.visibility = View.VISIBLE
-            locationTextView.text = searchViewModel.location
+            locationTextView.text = searchParameters.location
         }
     }
 

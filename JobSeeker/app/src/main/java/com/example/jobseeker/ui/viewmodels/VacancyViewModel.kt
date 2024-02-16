@@ -5,32 +5,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.database.VacancyDao
 import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.usecase.DeleteVacancyUseCase
+import com.example.jobseeker.domain.usecase.SaveVacancyUseCase
 import kotlinx.coroutines.*
 
 
 class VacancyViewModel(private val vacancyDao: VacancyDao) : ViewModel() {
 
-    val vacancies: LiveData<List<Vacancy>> = vacancyDao.getVacancies()
+    private val saveVacancyUseCase = SaveVacancyUseCase(vacancyDao)
+    private val deleteVacancyUseCase = DeleteVacancyUseCase(vacancyDao)
 
-    private fun addVacancy(vacancy: Vacancy): Deferred<Boolean> {
-        return viewModelScope.async {
-            val existingVacancy = withContext(Dispatchers.IO) {
-                vacancyDao.getVacancyByUrl(vacancy.url)
-            }
-            if (existingVacancy == null) {
-                return@async withContext(Dispatchers.IO) {
-                    vacancyDao.insert(vacancy)
-                    return@withContext true
-                }
-            } else {
-                return@async false
-            }
-        }
-    }
+    val vacancies: LiveData<List<Vacancy>> = vacancyDao.getVacancies()
 
     fun deleteVacancy(vacancy: Vacancy) {
         viewModelScope.launch {
-            vacancyDao.deleteByUrl(vacancy.url)
+            deleteVacancyUseCase.deleteVacancy(vacancy)
         }
     }
 
@@ -40,7 +29,9 @@ class VacancyViewModel(private val vacancyDao: VacancyDao) : ViewModel() {
             deleteVacancy(vacancy)
         } else {
             vacancy.isSaved = true
-            addVacancy(vacancy)
+            viewModelScope.launch {
+                saveVacancyUseCase.saveVacancy(vacancy)
+            }
         }
     }
 }
