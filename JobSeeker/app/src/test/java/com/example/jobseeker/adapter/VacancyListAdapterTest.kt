@@ -1,6 +1,6 @@
 package com.example.jobseeker.adapter
 
-import com.example.jobseeker.ui.adapters.VacancyListAdapter
+import com.example.jobseeker.ui.fragments.adapters.VacancyListAdapter
 import org.junit.Assert.*
 
 import org.junit.Test

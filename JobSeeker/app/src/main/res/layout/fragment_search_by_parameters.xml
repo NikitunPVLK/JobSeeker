@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="searchParametersFragment"
-            type="com.example.jobseeker.ui.fragments.SearchByParametersFragment" />
-    </data>
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.search_by_parameters.SearchByParametersFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/colorPrimary"
-        tools:context=".ui.fragments.SearchByParametersFragment">
+        android:background="?attr/colorPrimary">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -99,7 +92,6 @@
                         android:layout_marginTop="@dimen/search_by_parameters_search_button_margin_top"
                         android:backgroundTint="?attr/colorSurfaceContainerLow"
                         android:fontFamily="@font/roboto_black"
-                        android:onClick="@{()-> searchParametersFragment.submitSearchParameters()}"
                         android:text="@string/search_button_text"
                         android:textColor="?attr/colorPrimary"
                         android:textSize="@dimen/search_by_parameters_search_button_text_size"

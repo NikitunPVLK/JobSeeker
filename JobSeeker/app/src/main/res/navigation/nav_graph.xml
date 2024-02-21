@@ -3,47 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/searchParametersFragment">
+    app:startDestination="@id/searchByParametersFragment">
 
     <fragment
-        android:id="@+id/searchParametersFragment"
-        android:name="com.example.jobseeker.ui.fragments.SearchByParametersFragment"
+        android:id="@+id/searchByParametersFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_parameters.SearchByParametersFragment"
         android:label="Search With Parameters"
         tools:layout="@layout/fragment_search_by_parameters" >
         <action
-            android:id="@+id/action_searchParametersFragment_to_vacanciesListFragment"
-            app:destination="@id/vacanciesListFragment" />
-        <action
-            android:id="@+id/action_searchParametersFragment_to_skillsBasedSearchFragment"
-            app:destination="@id/skillsBasedSearchFragment" />
-        <action
-            android:id="@+id/action_searchParametersFragment_to_savedVacanciesFragment"
-            app:destination="@id/savedVacanciesFragment" />
+            android:id="@+id/action_searchByParametersFragment_to_searchByParametersResultFragment"
+            app:destination="@id/searchByParametersResultFragment" />
     </fragment>
     <fragment
-        android:id="@+id/vacanciesListFragment"
-        android:name="com.example.jobseeker.ui.fragments.VacanciesListFragment"
-        android:label="Vacancies"
-        tools:layout="@layout/fragment_vacancies_list" >
-        <action
-            android:id="@+id/action_vacanciesListFragment_to_detailedVacancyFragment"
-            app:destination="@id/detailedVacancyFragment" />
-        <argument
-            android:name="destination"
-            app:argType="com.example.jobseeker.ui.fragments.Destination" />
-    </fragment>
-    <fragment
-        android:id="@+id/skillsBasedSearchFragment"
-        android:name="com.example.jobseeker.ui.fragments.SearchBySkillsFragment"
+        android:id="@+id/searchBySkillsFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_skills.SearchBySkillsFragment"
         android:label="Skill Based Search"
         tools:layout="@layout/fragment_search_by_skills" >
         <action
-            android:id="@+id/action_skillsBasedSearchFragment_to_vacanciesListFragment"
-            app:destination="@id/vacanciesListFragment" />
+            android:id="@+id/action_searchBySkillsFragment_to_searchBySkillsResultFragment"
+            app:destination="@id/searchBySkillsResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedVacanciesFragment"
-        android:name="com.example.jobseeker.ui.fragments.SavedVacanciesFragment"
+        android:name="com.example.jobseeker.ui.fragments.saved_vacancies.SavedVacanciesFragment"
         android:label="Saved Vacancies"
         tools:layout="@layout/fragment_saved_vacancies" >
         <action
@@ -52,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailedVacancyFragment"
-        android:name="com.example.jobseeker.ui.fragments.VacancyFragment"
+        android:name="com.example.jobseeker.ui.fragments.vacancy_details.VacancyFragment"
         android:label="Vacancy"
         tools:layout="@layout/fragment_vacancy" >
         <argument
@@ -73,5 +55,23 @@
             android:name="url"
             app:argType="string"
             android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByParametersResultFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_parameters.BaseSearchByParametersResultFragment"
+        android:label="SearchByParametersResultFragment"
+        tools:layout="@layout/fragment_search_by_parameters_result">
+        <action
+            android:id="@+id/action_searchByParametersResultFragment_to_detailedVacancyFragment"
+            app:destination="@id/detailedVacancyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBySkillsResultFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_skills.BaseSearchBySkillsResultFragment"
+        android:label="SearchBySkillsResultFragment"
+        tools:layout="@layout/fragment_search_by_skills_result">
+        <action
+            android:id="@+id/action_searchBySkillsResultFragment_to_detailedVacancyFragment"
+            app:destination="@id/detailedVacancyFragment" />
     </fragment>
 </navigation>
