@@ -1,7 +1,7 @@
 package com.example.jobseeker.data.network.repositories.mock
 
-import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.usecase.network.IVacanciesNetworkRepository
+import com.example.jobseeker.domain.models.Vacancy
 
 class MockVacanciesNetworkRepository : IVacanciesNetworkRepository {
 

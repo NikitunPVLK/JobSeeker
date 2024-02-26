@@ -10,23 +10,20 @@ import android.widget.Button
 import android.widget.GridLayout
 import androidx.core.animation.doOnEnd
 import androidx.core.content.res.ResourcesCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchBySkillsBinding
-import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
+import com.example.jobseeker.ui.fragments.common.BaseFragment
 import com.example.jobseeker.ui.viewmodels.search_by_skills.SearchBySkillsViewModel
 import com.google.android.material.button.MaterialButton
 
-class SearchBySkillsFragment : Fragment() {
+class SearchBySkillsFragment : BaseFragment() {
 
     private val skills = mutableListOf<String>()
 
-    private val searchViewModel: SearchBySkillsViewModel by activityViewModels {
-        ViewModelFactory()
-    }
+    private lateinit var searchViewModel: SearchBySkillsViewModel
 
     private var _binding: FragmentSearchBySkillsBinding? = null
     private val binding get() = _binding!!
@@ -36,6 +33,11 @@ class SearchBySkillsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        searchViewModel = ViewModelProvider(
+            requireActivity(),
+            viewModelFactory
+        )[SearchBySkillsViewModel::class.java]
+
         _binding = FragmentSearchBySkillsBinding.inflate(inflater, container, false)
         binding.searchButton.setOnClickListener {
             submitSearchParameters()

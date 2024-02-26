@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.jobseeker.databinding.VacancyListItemBinding
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.models.Vacancy
 
 class VacancyListAdapter(
     private val onItemClicked: (Vacancy) -> Unit,

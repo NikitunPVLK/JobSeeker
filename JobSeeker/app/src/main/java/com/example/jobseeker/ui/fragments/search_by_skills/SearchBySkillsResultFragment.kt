@@ -6,20 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
-import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.databinding.FragmentSearchBySkillsResultBinding
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.models.Vacancy
 import com.example.jobseeker.ui.fragments.common.BaseSearchResultFragment
-import com.example.jobseeker.ui.fragments.search_by_parameters.SearchByParametersResultFragmentDirections
-import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.search_by_skills.SearchBySkillsViewModel
 
 class SearchBySkillsResultFragment : BaseSearchResultFragment() {
 
-    override val searchViewModel: SearchBySkillsViewModel by activityViewModels {
-        ViewModelFactory()
-    }
+    override lateinit var searchViewModel: SearchBySkillsViewModel
 
     private var _binding: FragmentSearchBySkillsResultBinding? = null
     private val binding
@@ -30,6 +26,11 @@ class SearchBySkillsResultFragment : BaseSearchResultFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        searchViewModel = ViewModelProvider(
+            requireActivity(),
+            viewModelFactory
+        )[SearchBySkillsViewModel::class.java]
+
         _binding = FragmentSearchBySkillsResultBinding.inflate(inflater, container, false)
         vacancyList = binding.vacancyList
         return binding.root

@@ -6,10 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.network.common.Result
-import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
-import com.example.jobseeker.data.network.services.VacanciesNetworkService
-import com.example.jobseeker.domain.Vacancy
-import com.example.jobseeker.domain.usecase.FetchVacanciesBySkillsUseCase
+import com.example.jobseeker.domain.models.Vacancy
+import com.example.jobseeker.domain.usecase.network.FetchVacanciesBySkillsUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
 import kotlinx.coroutines.launch
 

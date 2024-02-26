@@ -1,6 +1,6 @@
 package com.example.jobseeker.data.network.services
 
-import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
+import com.example.jobseeker.domain.usecase.network.IVacanciesNetworkRepository
 import com.example.jobseeker.data.network.repositories.mock.MockVacanciesNetworkRepository
 import com.example.jobseeker.data.network.repositories.retrofit.VacanciesNetworkRepository
 import com.example.jobseeker.ui.viewmodels.common.IVacanciesNetworkService

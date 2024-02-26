@@ -6,14 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.network.common.Result
-import com.example.jobseeker.data.network.services.VacanciesNetworkService
-import com.example.jobseeker.domain.SearchParameters
-import com.example.jobseeker.domain.Vacancy
-import com.example.jobseeker.domain.usecase.FetchVacanciesByParametersUseCase
+import com.example.jobseeker.domain.models.SearchParameters
+import com.example.jobseeker.domain.models.Vacancy
+import com.example.jobseeker.domain.usecase.network.FetchVacanciesByParametersUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SearchByParametersViewModel(
+class SearchByParametersViewModel @Inject constructor(
     private val useCase: FetchVacanciesByParametersUseCase
 ) : ViewModel(), ISearchViewModel {
 
@@ -23,12 +23,10 @@ class SearchByParametersViewModel(
     override val vacancies: LiveData<List<Vacancy>>
         get() = _vacancies
 
-    private lateinit var _searchParameters: SearchParameters
-    val searchParameters: SearchParameters
-        get() = _searchParameters
+    lateinit var searchParameters: SearchParameters
 
     fun searchVacanciesByParameters(searchParameters: SearchParameters) {
-        _searchParameters = searchParameters
+        this.searchParameters = searchParameters
         viewModelScope.launch {
             when (val result = useCase.fetchVacanciesByParameters(searchParameters)) {
                 is Result.Success -> _vacancies.value = result.vacancies

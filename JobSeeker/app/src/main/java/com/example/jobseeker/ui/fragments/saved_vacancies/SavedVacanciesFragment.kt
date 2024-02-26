@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.models.Vacancy
 import com.example.jobseeker.ui.fragments.common.BaseVacanciesListFragment
-import com.example.jobseeker.ui.fragments.search_by_parameters.SearchByParametersResultFragmentDirections
 
 class SavedVacanciesFragment: BaseVacanciesListFragment() {
 
@@ -28,6 +27,7 @@ class SavedVacanciesFragment: BaseVacanciesListFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         vacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
             if (vacancies.isEmpty()) {
                 binding.emptyListTextView.visibility = View.VISIBLE

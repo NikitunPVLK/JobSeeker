@@ -11,21 +11,18 @@ import androidx.annotation.DrawableRes
 import androidx.core.animation.doOnEnd
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchByParametersBinding
-import com.example.jobseeker.domain.SearchParameters
-import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
+import com.example.jobseeker.domain.models.SearchParameters
+import com.example.jobseeker.ui.fragments.common.BaseFragment
 import com.example.jobseeker.ui.viewmodels.search_by_parameters.SearchByParametersViewModel
 import kotlin.math.hypot
 
-class SearchByParametersFragment() : Fragment() {
+class SearchByParametersFragment : BaseFragment() {
 
-    private val searchViewModel: SearchByParametersViewModel by activityViewModels {
-        ViewModelFactory()
-    }
+    private lateinit var searchViewModel: SearchByParametersViewModel
 
     private var _binding: FragmentSearchByParametersBinding? = null
     private val binding get() = _binding!!
@@ -36,6 +33,12 @@ class SearchByParametersFragment() : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchByParametersBinding.inflate(inflater, container, false)
+
+        searchViewModel = ViewModelProvider(
+            requireActivity(),
+            viewModelFactory
+        )[SearchByParametersViewModel::class.java]
+
         setupCategoryAutoComplete()
         setupExperienceSpinner()
         setupLocationAutoComplete()
@@ -143,7 +146,7 @@ class SearchByParametersFragment() : Fragment() {
         ) as AnimatedVectorDrawable
     }
 
-    fun submitSearchParameters() {
+    private fun submitSearchParameters() {
         val searchParameters = SearchParameters(
             binding.keyWordsInput.text.toString(),
             binding.categoryInput.text.toString(),

@@ -1,6 +1,6 @@
 package com.example.jobseeker.data.network.common
 
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.models.Vacancy
 import java.lang.Exception
 
 sealed class Result {

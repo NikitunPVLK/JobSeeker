@@ -1,6 +1,6 @@
 package com.example.jobseeker.model
 
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.models.Vacancy
 import org.junit.Before
 
 import org.junit.Test

@@ -1,7 +1,7 @@
 package com.example.jobseeker.data.network.repositories.retrofit
 
-import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
-import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.domain.usecase.network.IVacanciesNetworkRepository
+import com.example.jobseeker.domain.models.Vacancy
 import retrofit2.http.GET
 import retrofit2.http.Query
 

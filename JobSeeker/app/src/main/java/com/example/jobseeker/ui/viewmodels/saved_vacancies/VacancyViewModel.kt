@@ -3,10 +3,10 @@ package com.example.jobseeker.ui.viewmodels.saved_vacancies
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jobseeker.data.database.VacancyDao
-import com.example.jobseeker.domain.Vacancy
-import com.example.jobseeker.domain.usecase.DeleteVacancyUseCase
-import com.example.jobseeker.domain.usecase.SaveVacancyUseCase
+import com.example.jobseeker.domain.usecase.db.VacancyDao
+import com.example.jobseeker.domain.models.Vacancy
+import com.example.jobseeker.domain.usecase.db.DeleteVacancyUseCase
+import com.example.jobseeker.domain.usecase.db.SaveVacancyUseCase
 import kotlinx.coroutines.*
 
 class VacancyViewModel(
