@@ -9,10 +9,11 @@ import com.example.jobseeker.domain.usecase.DeleteVacancyUseCase
 import com.example.jobseeker.domain.usecase.SaveVacancyUseCase
 import kotlinx.coroutines.*
 
-class VacancyViewModel(vacancyDao: VacancyDao) : ViewModel() {
-
-    private val saveVacancyUseCase = SaveVacancyUseCase(vacancyDao)
-    private val deleteVacancyUseCase = DeleteVacancyUseCase(vacancyDao)
+class VacancyViewModel(
+    vacancyDao: VacancyDao,
+    private val saveVacancyUseCase: SaveVacancyUseCase,
+    private val deleteVacancyUseCase: DeleteVacancyUseCase
+) : ViewModel() {
 
     val vacancies: LiveData<List<Vacancy>> = vacancyDao.getVacancies()
 

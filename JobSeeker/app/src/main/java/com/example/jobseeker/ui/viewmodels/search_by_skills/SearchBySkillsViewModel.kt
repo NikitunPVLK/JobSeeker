@@ -6,13 +6,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.network.common.Result
+import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
 import com.example.jobseeker.data.network.services.VacanciesNetworkService
 import com.example.jobseeker.domain.Vacancy
 import com.example.jobseeker.domain.usecase.FetchVacanciesBySkillsUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
 import kotlinx.coroutines.launch
 
-class SearchBySkillsViewModel : ViewModel(), ISearchViewModel {
+class SearchBySkillsViewModel(
+    private val useCase: FetchVacanciesBySkillsUseCase
+) : ViewModel(), ISearchViewModel {
     private val tag = "SearchBySkillsViewModel"
 
     private lateinit var _skills: List<String>
@@ -21,9 +24,6 @@ class SearchBySkillsViewModel : ViewModel(), ISearchViewModel {
     private var _vacancies = MutableLiveData<List<Vacancy>>()
     override val vacancies: LiveData<List<Vacancy>>
         get() = _vacancies
-
-    private val vacanciesRepository = VacanciesNetworkService.getVacancyNetworkRepository()
-    private val useCase = FetchVacanciesBySkillsUseCase(vacanciesRepository)
 
     fun searchVacanciesBySkills(skills: List<String>) {
         _skills = skills

@@ -13,7 +13,9 @@ import com.example.jobseeker.domain.usecase.FetchVacanciesByParametersUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
 import kotlinx.coroutines.launch
 
-class SearchByParametersViewModel : ViewModel(), ISearchViewModel {
+class SearchByParametersViewModel(
+    private val useCase: FetchVacanciesByParametersUseCase
+) : ViewModel(), ISearchViewModel {
 
     private val tag = "SearchByParametersVM"
 
@@ -24,10 +26,6 @@ class SearchByParametersViewModel : ViewModel(), ISearchViewModel {
     private lateinit var _searchParameters: SearchParameters
     val searchParameters: SearchParameters
         get() = _searchParameters
-
-    private val vacanciesRepository = VacanciesNetworkService.getVacancyNetworkRepository()
-
-    private val useCase = FetchVacanciesByParametersUseCase(vacanciesRepository)
 
     fun searchVacanciesByParameters(searchParameters: SearchParameters) {
         _searchParameters = searchParameters

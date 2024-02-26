@@ -7,12 +7,13 @@ import com.example.jobseeker.ui.viewmodels.search_by_parameters.ParametersHandle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class FetchVacanciesByParametersUseCase(private val vacanciesRepository: IVacanciesNetworkRepository) {
+class FetchVacanciesByParametersUseCase(
+    private val vacanciesRepository: IVacanciesNetworkRepository,
+    private val parametersHandler: ParametersHandler) {
 
     suspend fun fetchVacanciesByParameters(searchParameters: SearchParameters): Result {
         return withContext(Dispatchers.IO) {
             try {
-                val parametersHandler = ParametersHandler()
                 Result.Success(
                     vacanciesRepository.getVacanciesByParameters(
                         searchParameters.keyWords,
