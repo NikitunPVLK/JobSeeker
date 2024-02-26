@@ -4,25 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.jobseeker.common.application.JobSeekerApplication
-import com.example.jobseeker.ui.fragments.adapters.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
-import com.example.jobseeker.ui.viewmodels.saved_vacancies.VacancyViewModel
-import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
+import com.example.jobseeker.domain.Vacancy
+import com.example.jobseeker.ui.fragments.common.BaseVacanciesListFragment
+import com.example.jobseeker.ui.fragments.search_by_parameters.SearchByParametersResultFragmentDirections
 
-class SavedVacanciesFragment : Fragment() {
+class SavedVacanciesFragment: BaseVacanciesListFragment() {
+
     private var _binding: FragmentSavedVacanciesBinding? = null
-    private val binding get() = _binding!!
-
-    private val vacancyViewModel: VacancyViewModel by activityViewModels {
-        ViewModelFactory(
-            (activity?.application as JobSeekerApplication).database.vacancyDao()
-        )
-    }
+    private val binding
+        get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,33 +22,12 @@ class SavedVacanciesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSavedVacanciesBinding.inflate(inflater, container, false)
+        vacancyList = binding.vacancyList
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = VacancyListAdapter(
-            {
-                val action =
-                    SavedVacanciesFragmentDirections
-                        .actionSavedVacanciesFragmentToDetailedVacancyFragment(
-                            it.title,
-                            it.salary,
-                            it.company,
-                            it.location,
-                            it.description,
-                            it.url
-                        )
-                findNavController().navigate(action)
-            },
-            {
-                if(it.isSaved) {
-                    it.isSaved = false
-                    vacancyViewModel.deleteVacancy(it)
-                }
-            }
-        )
-        binding.vacancyList.adapter = adapter
         vacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
             if (vacancies.isEmpty()) {
                 binding.emptyListTextView.visibility = View.VISIBLE
@@ -66,8 +37,20 @@ class SavedVacanciesFragment : Fragment() {
                 }
             }
         }
+    }
 
-        binding.vacancyList.layoutManager = LinearLayoutManager(context)
+    override fun onListItemClicked(vacancy: Vacancy) {
+        val action =
+            SavedVacanciesFragmentDirections
+                .actionSavedVacanciesFragmentToDetailedVacancyFragment(
+                    vacancy.title,
+                    vacancy.salary,
+                    vacancy.company,
+                    vacancy.location,
+                    vacancy.description,
+                    vacancy.url
+                )
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

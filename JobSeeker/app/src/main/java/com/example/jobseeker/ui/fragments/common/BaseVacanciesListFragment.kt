@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobseeker.common.application.JobSeekerApplication
@@ -13,7 +14,7 @@ import com.example.jobseeker.ui.fragments.adapters.VacancyListAdapter
 import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.saved_vacancies.VacancyViewModel
 
-open class BaseVacanciesListFragment : Fragment() {
+abstract class BaseVacanciesListFragment : Fragment() {
 
     protected val vacancyViewModel: VacancyViewModel by activityViewModels {
         ViewModelFactory((activity?.application as JobSeekerApplication).database.vacancyDao())
@@ -36,19 +37,7 @@ open class BaseVacanciesListFragment : Fragment() {
         )
     }
 
-    private fun onListItemClicked(vacancy: Vacancy) {
-//        val action =
-//            VacanciesListFragmentDirections
-//                .actionVacanciesListFragmentToDetailedVacancyFragment(
-//                    vacancy.title,
-//                    vacancy.salary,
-//                    vacancy.company,
-//                    vacancy.location,
-//                    vacancy.description,
-//                    vacancy.url
-//                )
-//        findNavController().navigate(action)
-    }
+    abstract fun onListItemClicked(vacancy: Vacancy)
 
     private fun onSaveButtonClicked(vacancy: Vacancy) {
         vacancyViewModel.changeSavedState(vacancy)

@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchByParametersResultFragment"
-        android:name="com.example.jobseeker.ui.fragments.search_by_parameters.BaseSearchByParametersResultFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_parameters.SearchByParametersResultFragment"
         android:label="SearchByParametersResultFragment"
         tools:layout="@layout/fragment_search_by_parameters_result">
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchBySkillsResultFragment"
-        android:name="com.example.jobseeker.ui.fragments.search_by_skills.BaseSearchBySkillsResultFragment"
+        android:name="com.example.jobseeker.ui.fragments.search_by_skills.SearchBySkillsResultFragment"
         android:label="SearchBySkillsResultFragment"
         tools:layout="@layout/fragment_search_by_skills_result">
         <action
