@@ -1,12 +1,11 @@
 package com.example.jobseeker.domain.usecase
 
 import com.example.jobseeker.data.network.common.Result
-import com.example.jobseeker.data.network.repositories.common.INetworkVacanciesRepository
-import com.example.jobseeker.data.network.repositories.retrofit.VacanciesApiRepository
+import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class FetchVacanciesBySkillsUseCase(private val vacanciesApiRepository: INetworkVacanciesRepository) {
+class FetchVacanciesBySkillsUseCase(private val vacanciesApiRepository: IVacanciesNetworkRepository) {
     suspend fun fetchVacanciesBySkills(skills: List<String>): Result {
         return withContext(Dispatchers.IO) {
             try {

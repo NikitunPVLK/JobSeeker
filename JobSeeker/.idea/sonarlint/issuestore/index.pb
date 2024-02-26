@@ -1,8 +1,6 @@
 
 w
 Gapp/src/test/java/com/example/jobseeker/data/VacancyRoomDatabaseTest.kt,c\9\c93df7120bcffe70d036716ab5e0cf30d04acd80
-s
-Capp/src/test/java/com/example/jobseeker/network/VacanciesApiTest.kt,1\d\1d1db3d59dccf3ebd06f50522e38a7397590caab
 j
 :app/src/test/java/com/example/jobseeker/ExampleUnitTest.kt,9\0\9002da3e855cfe9f9f458952b43ee764bbe18dec
 ?
@@ -13,16 +11,10 @@ A
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 |
 Lapp/src/main/java/com/example/jobseeker/data/database/VacancyRoomDatabase.kt,2\9\29a35f399ca695ee6a95b3eb47d1bf7db474c18e
-y
-Iapp/src/main/java/com/example/jobseeker/ui/viewmodels/ViewModelFactory.kt,f\4\f44fb972b0c5dc5247849c2487f6671f2812d9d1
 s
 Capp/src/main/java/com/example/jobseeker/data/database/VacancyDao.kt,a\a\aa8477249590c2f53702ef81a3bfaf30b130e0d5
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-z
-Japp/src/main/java/com/example/jobseeker/ui/viewmodels/ParametersHandler.kt,e\1\e14d33e207e427f2eb430db3fc3343138faa8bb2
-{
-Kapp/src/main/java/com/example/jobseeker/data/network/VacanciesApiService.kt,b\5\b514b0755e0a60948ac63a9f026a9b097b0acf0c
 |
 Lapp/src/main/java/com/example/jobseeker/domain/usecase/SaveVacancyUseCase.kt,8\f\8f8d9ed767b7127ee75d717e8da948edfd40d867
 á
@@ -35,10 +27,6 @@ r
 Bapp/src/main/java/com/example/jobseeker/domain/SearchParameters.kt,2\a\2adc169fe27723a82468c7af2f7a708a1730422a
 i
 9app/src/main/java/com/example/jobseeker/domain/Vacancy.kt,3\0\30c6da513a2f8d333a6325bb641a2aa35d94da2d
-n
->app/src/main/java/com/example/jobseeker/data/network/Result.kt,3\2\32c30986116614cbc61946f9e7b17e8d35975ac4
-t
-Dapp/src/main/java/com/example/jobseeker/data/network/VacanciesApi.kt,f\6\f612557af335336023002d299e266e5965408db6
 u
 Eapp/src/main/java/com/example/jobseeker/ui/activities/MainActivity.kt,9\1\913c8def65c3ae3df2d38d5cd959bdb88d4c2148
 Ç
@@ -61,8 +49,6 @@ P
 Sapp/src/main/java/com/example/jobseeker/ui/fragments/adapters/VacancyListAdapter.kt,d\3\d3d9763d8b7c77bee6ad91e397abb91fa4b4f973
 Ä
 Papp/src/main/java/com/example/jobseeker/ui/viewmodels/common/ISearchViewModel.kt,e\5\e502596fecc843c72666beb4037812428538f150
-É
-Sapp/src/main/java/com/example/jobseeker/ui/viewmodels/common/TempSearchViewModel.kt,0\6\0627b3c392d0a67c9a677ce56cfbdc074b81c8f6
 ë
 aapp/src/main/java/com/example/jobseeker/ui/fragments/saved_vacancies/NewSavedVacanciesFragment.kt,3\6\3601481678e35345f0ef8c2954b579466bd7d4b6
 ô
@@ -75,3 +61,17 @@ qapp/src/main/java/com/example/jobseeker/ui/fragments/search_by_parameters/BaseS
 Wapp/src/main/java/com/example/jobseeker/ui/fragments/common/BaseSearchResultFragment.kt,4\0\40e0dce6cf946bf65e65445b27b279d702c29a38
 ô
 iapp/src/main/java/com/example/jobseeker/ui/fragments/search_by_skills/BaseSearchBySkillsResultFragment.kt,0\d\0dfb52ccbd4453304fd605f2a101e8ca7a38bdb0
+u
+Eapp/src/main/java/com/example/jobseeker/data/network/common/Result.kt,2\1\21d767de0a7bd4da06e3dfc398c24af1c0be01bd
+ò
+happ/src/main/java/com/example/jobseeker/data/network/repositories/retrofit/VacanciesNetworkRepository.kt,1\c\1c971457885fd5977a8b891abdbc8be44bc8ba80
+ò
+happ/src/main/java/com/example/jobseeker/data/network/repositories/mock/MockVacanciesNetworkRepository.kt,b\b\bbddd2d0ade9e3d89fe61fe4962636a3feeb20d5
+ó
+gapp/src/main/java/com/example/jobseeker/data/network/repositories/common/IVacanciesNetworkRepository.kt,b\3\b3b01cc52a01f42498493010704e91e499e3e301
+à
+Xapp/src/main/java/com/example/jobseeker/data/network/services/VacanciesNetworkService.kt,7\2\723167a9d09cb8929bc60d7e89d63982ca020cb9
+Ä
+Papp/src/main/java/com/example/jobseeker/ui/viewmodels/common/ViewModelFactory.kt,c\0\c064a2a4f71d2fcc35d37a38477dc78523dc399e
+è
+_app/src/main/java/com/example/jobseeker/ui/viewmodels/search_by_parameters/ParametersHandler.kt,9\0\90d414987b9f91c2b962d682eecead8871d8206a

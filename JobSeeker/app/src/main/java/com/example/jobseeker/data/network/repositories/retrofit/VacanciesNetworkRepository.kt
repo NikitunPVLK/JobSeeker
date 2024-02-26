@@ -1,11 +1,11 @@
 package com.example.jobseeker.data.network.repositories.retrofit
 
-import com.example.jobseeker.data.network.repositories.common.INetworkVacanciesRepository
+import com.example.jobseeker.data.network.repositories.common.IVacanciesNetworkRepository
 import com.example.jobseeker.domain.Vacancy
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface VacanciesApiRepository: INetworkVacanciesRepository {
+interface VacanciesNetworkRepository: IVacanciesNetworkRepository {
     @GET("parameters")
     override suspend fun getVacanciesByParameters(
         @Query("search") search: String,

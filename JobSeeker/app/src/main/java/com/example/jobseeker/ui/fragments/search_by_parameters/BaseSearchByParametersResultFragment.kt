@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.jobseeker.databinding.FragmentSearchByParametersResultBinding
 import com.example.jobseeker.ui.fragments.common.BaseSearchResultFragment
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.search_by_parameters.SearchByParametersViewModel
 
 class BaseSearchByParametersResultFragment : BaseSearchResultFragment() {

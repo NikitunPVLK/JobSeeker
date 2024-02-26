@@ -2,7 +2,7 @@ package com.example.jobseeker.data.network.repositories.common
 
 import com.example.jobseeker.domain.Vacancy
 
-interface INetworkVacanciesRepository {
+interface IVacanciesNetworkRepository {
 
     suspend fun getVacanciesByParameters(
         search: String,

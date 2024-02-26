@@ -10,7 +10,7 @@ import com.example.jobseeker.common.application.JobSeekerApplication
 import com.example.jobseeker.domain.Vacancy
 //import com.example.jobseeker.ui.fragments.VacanciesListFragmentDirections
 import com.example.jobseeker.ui.fragments.adapters.VacancyListAdapter
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.saved_vacancies.VacancyViewModel
 
 open class BaseVacanciesListFragment : Fragment() {

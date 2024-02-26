@@ -1,27 +1,33 @@
 package com.example.jobseeker.ui.viewmodels.search_by_parameters
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.network.common.Result
-import com.example.jobseeker.data.network.repositories.retrofit.VacanciesApi
-import com.example.jobseeker.data.network.services.NetworkVacanciesService
+import com.example.jobseeker.data.network.services.VacanciesNetworkService
 import com.example.jobseeker.domain.SearchParameters
+import com.example.jobseeker.domain.Vacancy
 import com.example.jobseeker.domain.usecase.FetchVacanciesByParametersUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
-import com.example.jobseeker.ui.viewmodels.common.TempSearchViewModel
 import kotlinx.coroutines.launch
 
-class SearchByParametersViewModel() : TempSearchViewModel(), ISearchViewModel {
+class SearchByParametersViewModel : ViewModel(), ISearchViewModel {
 
     private val tag = "SearchByParametersVM"
+
+    private var _vacancies = MutableLiveData<List<Vacancy>>()
+    override val vacancies: LiveData<List<Vacancy>>
+        get() = _vacancies
 
     private lateinit var _searchParameters: SearchParameters
     val searchParameters: SearchParameters
         get() = _searchParameters
 
-    private val vacanciesService = NetworkVacanciesService()
+    private val vacanciesRepository = VacanciesNetworkService.getVacancyNetworkRepository()
 
-    private val useCase = FetchVacanciesByParametersUseCase(vacanciesService.getNetworkVacanciesRepository())
+    private val useCase = FetchVacanciesByParametersUseCase(vacanciesRepository)
 
     fun searchVacanciesByParameters(searchParameters: SearchParameters) {
         _searchParameters = searchParameters

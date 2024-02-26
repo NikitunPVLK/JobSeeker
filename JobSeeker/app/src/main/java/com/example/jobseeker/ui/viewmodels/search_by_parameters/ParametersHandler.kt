@@ -1,4 +1,4 @@
-package com.example.jobseeker.ui.viewmodels
+package com.example.jobseeker.ui.viewmodels.search_by_parameters
 
 class ParametersHandler {
     fun getFormattedExperience(experience: String): String {

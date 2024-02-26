@@ -16,7 +16,7 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchBySkillsBinding
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.search_by_skills.SearchBySkillsViewModel
 import com.google.android.material.button.MaterialButton
 

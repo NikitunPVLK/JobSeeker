@@ -9,7 +9,7 @@ import android.widget.GridLayout
 import androidx.fragment.app.activityViewModels
 import com.example.jobseeker.databinding.FragmentSearchBySkillsResultBinding
 import com.example.jobseeker.ui.fragments.common.BaseSearchResultFragment
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.search_by_skills.SearchBySkillsViewModel
 
 class BaseSearchBySkillsResultFragment : BaseSearchResultFragment() {

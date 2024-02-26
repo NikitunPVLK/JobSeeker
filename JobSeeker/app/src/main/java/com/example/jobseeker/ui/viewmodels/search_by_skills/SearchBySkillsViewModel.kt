@@ -1,24 +1,29 @@
 package com.example.jobseeker.ui.viewmodels.search_by_skills
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.jobseeker.data.network.common.Result
-import com.example.jobseeker.data.network.repositories.retrofit.VacanciesApi
-import com.example.jobseeker.data.network.services.NetworkVacanciesService
+import com.example.jobseeker.data.network.services.VacanciesNetworkService
+import com.example.jobseeker.domain.Vacancy
 import com.example.jobseeker.domain.usecase.FetchVacanciesBySkillsUseCase
 import com.example.jobseeker.ui.viewmodels.common.ISearchViewModel
-import com.example.jobseeker.ui.viewmodels.common.TempSearchViewModel
 import kotlinx.coroutines.launch
 
-class SearchBySkillsViewModel() : TempSearchViewModel(), ISearchViewModel {
+class SearchBySkillsViewModel : ViewModel(), ISearchViewModel {
     private val tag = "SearchBySkillsViewModel"
 
     private lateinit var _skills: List<String>
     val skills get() = _skills
 
-    private val vacanciesService = NetworkVacanciesService()
-    private val useCase =
-        FetchVacanciesBySkillsUseCase(vacanciesService.getNetworkVacanciesRepository())
+    private var _vacancies = MutableLiveData<List<Vacancy>>()
+    override val vacancies: LiveData<List<Vacancy>>
+        get() = _vacancies
+
+    private val vacanciesRepository = VacanciesNetworkService.getVacancyNetworkRepository()
+    private val useCase = FetchVacanciesBySkillsUseCase(vacanciesRepository)
 
     fun searchVacanciesBySkills(skills: List<String>) {
         _skills = skills

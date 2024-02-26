@@ -1,4 +1,4 @@
-package com.example.jobseeker.ui.viewmodels
+package com.example.jobseeker.ui.viewmodels.common
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

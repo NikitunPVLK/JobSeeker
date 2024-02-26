@@ -12,7 +12,7 @@ import com.example.jobseeker.common.application.JobSeekerApplication
 import com.example.jobseeker.ui.fragments.adapters.VacancyListAdapter
 import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
 import com.example.jobseeker.ui.viewmodels.saved_vacancies.VacancyViewModel
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 
 class SavedVacanciesFragment : Fragment() {
     private var _binding: FragmentSavedVacanciesBinding? = null

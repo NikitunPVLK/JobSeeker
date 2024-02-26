@@ -17,7 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.jobseeker.R
 import com.example.jobseeker.databinding.FragmentSearchByParametersBinding
 import com.example.jobseeker.domain.SearchParameters
-import com.example.jobseeker.ui.viewmodels.ViewModelFactory
+import com.example.jobseeker.ui.viewmodels.common.ViewModelFactory
 import com.example.jobseeker.ui.viewmodels.search_by_parameters.SearchByParametersViewModel
 import kotlin.math.hypot
 
