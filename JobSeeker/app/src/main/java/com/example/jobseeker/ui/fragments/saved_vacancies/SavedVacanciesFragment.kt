@@ -31,7 +31,10 @@ class SavedVacanciesFragment: BaseVacanciesListFragment() {
         vacancyViewModel.vacancies.observe(viewLifecycleOwner) { vacancies ->
             if (vacancies.isEmpty()) {
                 binding.emptyListTextView.visibility = View.VISIBLE
+                binding.vacancyList.visibility = View.INVISIBLE
             } else {
+                binding.emptyListTextView.visibility = View.INVISIBLE
+                binding.vacancyList.visibility = View.VISIBLE
                 vacancies.let {
                     adapter.submitList(it)
                 }
