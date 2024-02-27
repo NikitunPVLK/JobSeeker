@@ -8,6 +8,7 @@ import com.example.jobseeker.domain.usecase.network.FetchVacanciesByParametersUs
 import com.example.jobseeker.domain.usecase.network.FetchVacanciesBySkillsUseCase
 import com.example.jobseeker.domain.common.ParametersHandler
 import com.example.jobseeker.domain.usecase.db.DeleteVacancyUseCase
+import com.example.jobseeker.domain.usecase.db.GetSavedVacanciesUseCase
 import com.example.jobseeker.domain.usecase.db.SaveVacancyUseCase
 import dagger.Module
 import dagger.Provides
@@ -26,6 +27,10 @@ class UseCaseModule(private val application: JobSeekerApplication) {
     @ApplicationScope
     fun vacanciesNetworkRepository(): IVacanciesNetworkRepository =
         VacanciesNetworkService.getVacancyNetworkRepository()
+
+    @Provides
+    fun getSavedVacanciesUseCase(vacancyDao: VacancyDao): GetSavedVacanciesUseCase =
+        GetSavedVacanciesUseCase(vacancyDao)
 
     @Provides
     fun saveVacancyUseCase(vacancyDao: VacancyDao): SaveVacancyUseCase =

@@ -2,9 +2,11 @@ package com.example.jobseeker.domain.usecase.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.jobseeker.domain.di.ApplicationScope
 import com.example.jobseeker.domain.models.Vacancy
 
 @Dao
+@ApplicationScope
 interface VacancyDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(vacancy: Vacancy)
