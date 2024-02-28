@@ -5,12 +5,19 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.example.jobseeker.databinding.FragmentVacancyBinding
+import com.example.jobseeker.domain.models.Vacancy
+import com.example.jobseeker.ui.fragments.common.BaseFragment
+import com.example.jobseeker.ui.viewmodels.saved_vacancies.VacancyViewModel
 
-class VacancyFragment : Fragment() {
+class VacancyFragment : BaseFragment() {
     private val navigationArgs: VacancyFragmentArgs by navArgs()
+
+    private lateinit var vacancyViewModel: VacancyViewModel
+
+    private lateinit var vacancy: Vacancy
 
     private var _binding: FragmentVacancyBinding? = null
     private val binding get() = _binding!!
@@ -26,20 +33,38 @@ class VacancyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        vacancy = navigationArgs.vacancy
+
+        vacancyViewModel = ViewModelProvider(
+            requireActivity(),
+            viewModelFactory
+        )[VacancyViewModel::class.java]
+
         binding.apply {
-            with(navigationArgs) {
-                vacancyTitle.text = title
-                if (salary.isNotEmpty()) {
-                    vacancySalary.text = salary
-                }
-                else {
-                    vacancySalary.visibility = View.GONE
-                }
-                vacancyCompany.text = company
-                vacancyLocation.text = location
-                vacancyDescription.text = Html.fromHtml(description)
-                vacancyUrl.text = buildUrlText(url)
+            vacancyTitle.text = vacancy.title
+            if (vacancy.salary.isNotEmpty()) {
+                vacancySalary.text = vacancy.salary
+            } else {
+                vacancySalary.visibility = View.GONE
             }
+            vacancyCompany.text = vacancy.company
+            vacancyLocation.text = vacancy.location
+            vacancyDescription.text = Html.fromHtml(vacancy.description)
+            vacancyUrl.text = buildUrlText(vacancy.url)
+            vacancySaveButton.setOnClickListener {
+                vacancyViewModel.changeVacancySavedState(vacancy)
+                setupSaveButtonText()
+            }
+            setupSaveButtonText()
+        }
+    }
+
+    private fun setupSaveButtonText() {
+        if (vacancy.isSaved) {
+            binding.vacancySaveButton.text = "Delete"
+        } else {
+            binding.vacancySaveButton.text = "Save"
         }
     }
 

@@ -51,14 +51,7 @@ class SearchBySkillsResultFragment : BaseSearchResultFragment() {
     override fun onListItemClicked(vacancy: Vacancy) {
         val action =
             SearchBySkillsResultFragmentDirections
-                .actionSearchBySkillsResultFragmentToDetailedVacancyFragment(
-                    vacancy.title,
-                    vacancy.salary,
-                    vacancy.company,
-                    vacancy.location,
-                    vacancy.description,
-                    vacancy.url
-                )
+                .actionSearchBySkillsResultFragmentToDetailedVacancyFragment(vacancy)
         findNavController().navigate(action)
     }
 

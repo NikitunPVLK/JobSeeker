@@ -38,23 +38,8 @@
         android:label="Vacancy"
         tools:layout="@layout/fragment_vacancy" >
         <argument
-            android:name="title"
-            app:argType="string" />
-        <argument
-            android:name="salary"
-            app:argType="string" />
-        <argument
-            android:name="company"
-            app:argType="string" />
-        <argument android:name="location"
-            app:argType="string" />
-        <argument
-            android:name="description"
-            app:argType="string" />
-        <argument
-            android:name="url"
-            app:argType="string"
-            android:defaultValue='""' />
+            android:name="vacancy"
+            app:argType="com.example.jobseeker.domain.models.Vacancy" />
     </fragment>
     <fragment
         android:id="@+id/searchByParametersResultFragment"

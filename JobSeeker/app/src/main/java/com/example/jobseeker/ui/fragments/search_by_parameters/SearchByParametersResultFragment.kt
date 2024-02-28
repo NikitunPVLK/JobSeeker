@@ -49,14 +49,7 @@ class SearchByParametersResultFragment : BaseSearchResultFragment() {
     override fun onListItemClicked(vacancy: Vacancy) {
         val action =
             SearchByParametersResultFragmentDirections
-                .actionSearchByParametersResultFragmentToDetailedVacancyFragment(
-                    vacancy.title,
-                    vacancy.salary,
-                    vacancy.company,
-                    vacancy.location,
-                    vacancy.description,
-                    vacancy.url
-                )
+                .actionSearchByParametersResultFragmentToDetailedVacancyFragment(vacancy)
         findNavController().navigate(action)
     }
 

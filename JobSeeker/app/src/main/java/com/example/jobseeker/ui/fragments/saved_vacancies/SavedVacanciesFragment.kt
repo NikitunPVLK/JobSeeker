@@ -9,7 +9,7 @@ import com.example.jobseeker.databinding.FragmentSavedVacanciesBinding
 import com.example.jobseeker.domain.models.Vacancy
 import com.example.jobseeker.ui.fragments.common.BaseVacanciesListFragment
 
-class SavedVacanciesFragment: BaseVacanciesListFragment() {
+class SavedVacanciesFragment : BaseVacanciesListFragment() {
 
     private var _binding: FragmentSavedVacanciesBinding? = null
     private val binding
@@ -45,14 +45,7 @@ class SavedVacanciesFragment: BaseVacanciesListFragment() {
     override fun onListItemClicked(vacancy: Vacancy) {
         val action =
             SavedVacanciesFragmentDirections
-                .actionSavedVacanciesFragmentToDetailedVacancyFragment(
-                    vacancy.title,
-                    vacancy.salary,
-                    vacancy.company,
-                    vacancy.location,
-                    vacancy.description,
-                    vacancy.url
-                )
+                .actionSavedVacanciesFragmentToDetailedVacancyFragment(vacancy)
         findNavController().navigate(action)
     }
 

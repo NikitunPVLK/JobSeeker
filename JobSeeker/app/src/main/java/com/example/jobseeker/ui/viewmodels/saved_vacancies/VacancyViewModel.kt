@@ -24,7 +24,7 @@ class VacancyViewModel(
         }
     }
 
-    fun changeSavedState(vacancy: Vacancy){
+    fun changeVacancySavedState(vacancy: Vacancy){
         if (vacancy.isSaved) {
             vacancy.isSaved = false
             deleteVacancy(vacancy)

@@ -51,8 +51,6 @@ happ/src/main/java/com/example/jobseeker/data/network/repositories/mock/MockVaca
 Xapp/src/main/java/com/example/jobseeker/data/network/services/VacanciesNetworkService.kt,7\2\723167a9d09cb8929bc60d7e89d63982ca020cb9
 Ä
 Papp/src/main/java/com/example/jobseeker/ui/viewmodels/common/ViewModelFactory.kt,c\0\c064a2a4f71d2fcc35d37a38477dc78523dc399e
-à
-Xapp/src/main/java/com/example/jobseeker/ui/viewmodels/common/IVacanciesNetworkService.kt,5\a\5af2cef1f1cf9e19a51c8b4c9ab919b27b95e4d8
 ù
 mapp/src/main/java/com/example/jobseeker/ui/fragments/search_by_parameters/SearchByParametersResultFragment.kt,2\7\274db4441de33754dcb18fbe8ca7cf9399c506a0
 ï
@@ -83,3 +81,7 @@ p
 @app/src/main/java/com/example/jobseeker/ui/di/FragmentsModule.kt,b\0\b09774c4ad8e765d7ff7dd62d6893c63adc641bd
 s
 Capp/src/main/java/com/example/jobseeker/ui/di/FragmentsComponent.kt,f\5\f5c023cb900d378e53c2b4ae6f74602d2d2086e2
+Ö
+Uapp/src/main/java/com/example/jobseeker/domain/usecase/db/GetSavedVacanciesUseCase.kt,2\5\259d62962f1a7879b909a165f895af560bf8247d
+p
+@app/src/main/java/com/example/jobseeker/domain/models/Vacancy.kt,0\5\0530641f5d7dd982544df947be441a6fa22117e7

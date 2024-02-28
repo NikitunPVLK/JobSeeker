@@ -38,6 +38,6 @@ abstract class BaseVacanciesListFragment : BaseFragment() {
     abstract fun onListItemClicked(vacancy: Vacancy)
 
     private fun onSaveButtonClicked(vacancy: Vacancy) {
-        vacancyViewModel.changeSavedState(vacancy)
+        vacancyViewModel.changeVacancySavedState(vacancy)
     }
 }
