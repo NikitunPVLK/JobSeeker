@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.SearchBySkillsFragment">
+    tools:context=".ui.fragments.search_by_skills.SearchBySkillsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,13 +13,13 @@
 
         <TextView
             android:id="@+id/label"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/search_by_skills_hint_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Here you can enter your skills and we will find suitable vacancies"
+            android:layout_marginTop="@dimen/search_by_skills_hint_margin_top"
+            android:text="@string/search_by_skills_hint_text"
             android:textAlignment="center"
             android:textColor="?attr/colorOnPrimary"
-            android:textSize="20sp"
+            android:textSize="@dimen/search_by_skills_hint_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
             android:id="@+id/skills_input_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/skills_input_margin_top"
             app:boxBackgroundColor="?attr/colorSurfaceContainerLow"
             app:hintEnabled="false"
             app:layout_constraintEnd_toStartOf="@id/add_word_button"
@@ -38,22 +38,21 @@
 
             <AutoCompleteTextView
                 android:id="@+id/skills_input"
-                android:layout_width="300dp"
+                android:layout_width="@dimen/skills_input_width"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:hint="Skills"
+                android:hint="@string/skills_input_hint"
                 android:maxLines="1"
-                android:minHeight="48dp"
                 android:textColorHint="?attr/colorSecondary" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <ImageButton
             android:id="@+id/add_word_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/add_skill_button_width"
+            android:layout_height="@dimen/add_skill_button_height"
             android:backgroundTint="?attr/colorPrimary"
             android:src="@drawable/add_word"
+            android:contentDescription="@string/add_skill_button_content_description"
             app:layout_constraintBottom_toBottomOf="@+id/skills_input_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -64,7 +63,7 @@
             android:id="@+id/grid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/skills_grid_margin_top"
             android:columnCount="3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,29 +74,15 @@
             android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/search_by_skills_search_button_margin_top"
             android:backgroundTint="?attr/colorSurfaceContainerLow"
             android:fontFamily="@font/roboto_black"
-            android:text="Find!"
+            android:text="@string/search_button_text"
             android:textColor="?attr/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="@dimen/search_by_skills_search_button_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/skills_input_layout" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="21dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="390dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

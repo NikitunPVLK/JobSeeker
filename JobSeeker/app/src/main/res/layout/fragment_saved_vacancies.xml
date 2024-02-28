@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.SavedVacanciesFragment">
+    tools:context=".ui.fragments.saved_vacancies.SavedVacanciesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vacancy_list"
@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
-        android:text="There are no saved vacancies"
-        android:textSize="20sp"
+        android:text="@string/empty_saved_vacancies_text_view_text"
+        android:textSize="@dimen/empty_saved_vacancies_text_view_text_size"
         />
 
 </FrameLayout>

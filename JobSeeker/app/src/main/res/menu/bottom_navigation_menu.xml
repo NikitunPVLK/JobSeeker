@@ -2,15 +2,15 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/searchParametersFragment"
+        android:id="@+id/searchByParametersFragment"
         android:icon="@drawable/parameters"
-        android:title="Parameters" />
+        android:title="@string/item_parameters_text" />
     <item
-        android:id="@+id/skillsBasedSearchFragment"
+        android:id="@+id/searchBySkillsFragment"
         android:icon="@drawable/skills"
-        android:title="Skills" />
+        android:title="@string/item_skills_text" />
     <item
         android:id="@+id/savedVacanciesFragment"
         android:icon="@drawable/favorite"
-        android:title="Saved vacancies" />
+        android:title="@string/item_saved_vacancies_text" />
 </menu>

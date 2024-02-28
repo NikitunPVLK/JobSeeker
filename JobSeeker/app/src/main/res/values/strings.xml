@@ -1,7 +1,29 @@
 <resources>
     <string name="app_name">JobSeeker</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_button_text">Find!</string>
+
+    <!--Bottom navigation-->
+    <string name="item_parameters_text">Parameters</string>
+    <string name="item_skills_text">Skills</string>
+    <string name="item_saved_vacancies_text">Saved vacancies</string>
+
+    <!--Search by parameters-->
+    <string name="app_title">Job seeker</string>
+    <string name="app_title_parenthesis">)</string>
+    <string name="key_words_input_hint">Junior/QA/Python…</string>
+    <string name="extended_search_button_text">Extended search</string>
+    <string name="experience_label_text">Experience</string>
+    <string name="category_input_hint">Category</string>
+    <string name="location_input_hint">Location</string>
+
+    <!--Search by skills-->
+    <string name="search_by_skills_hint_text">Here you can enter your skills and we will find suitable vacancies</string>
+    <string name="skills_input_hint">Skills</string>
+    <string name="add_skill_button_content_description">Add skill</string>
+
+
+    <!--Saved Vacancies-->
+    <string name="empty_saved_vacancies_text_view_text">There are no saved vacancies</string>
     <string-array name="location_array">
         <item>Kyiv</item>
         <item>Lviv</item>

@@ -1,0 +1,39 @@
+package com.example.jobseeker.ui.viewmodels.saved_vacancies
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.jobseeker.domain.models.Vacancy
+import com.example.jobseeker.domain.usecase.db.DeleteVacancyUseCase
+import com.example.jobseeker.domain.usecase.db.GetSavedVacanciesUseCase
+import com.example.jobseeker.domain.usecase.db.SaveVacancyUseCase
+import kotlinx.coroutines.*
+
+class VacancyViewModel(
+    private val getSavedVacanciesUseCase: GetSavedVacanciesUseCase,
+    private val saveVacancyUseCase: SaveVacancyUseCase,
+    private val deleteVacancyUseCase: DeleteVacancyUseCase
+) : ViewModel() {
+
+    val vacancies: LiveData<List<Vacancy>>
+        get() = getSavedVacanciesUseCase.getAllVacancies()
+
+    private fun deleteVacancy(vacancy: Vacancy) {
+        viewModelScope.launch {
+            deleteVacancyUseCase.deleteVacancy(vacancy)
+        }
+    }
+
+    fun changeVacancySavedState(vacancy: Vacancy){
+        if (vacancy.isSaved) {
+            vacancy.isSaved = false
+            deleteVacancy(vacancy)
+        } else {
+            vacancy.isSaved = true
+            viewModelScope.launch {
+                saveVacancyUseCase.saveVacancy(vacancy)
+            }
+        }
+    }
+}
+
